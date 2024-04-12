@@ -35,6 +35,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OleDb, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.OleDb.8.0.0\lib\net462\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,10 +56,79 @@
     <Compile Include="DocAnaSayfa.Designer.cs">
       <DependentUpon>DocAnaSayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocLogin.Designer.cs">
+      <DependentUpon>DocLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorIslemleri.Designer.cs">
+      <DependentUpon>DoktorIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafik1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafik1.Designer.cs">
+      <DependentUpon>Grafik1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaRapor.Designer.cs">
+      <DependentUpon>HastaRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opening.Designer.cs">
+      <DependentUpon>Opening.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandevuAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandevuAlma.Designer.cs">
+      <DependentUpon>RandevuAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RandevuUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandevuUpdate.Designer.cs">
+      <DependentUpon>RandevuUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecAnaSayfa.Designer.cs">
+      <DependentUpon>SecAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecLogin.Designer.cs">
+      <DependentUpon>SecLogin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DocAnaSayfa.resx">
       <DependentUpon>DocAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocLogin.resx">
+      <DependentUpon>DocLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorIslemleri.resx">
+      <DependentUpon>DoktorIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafik1.resx">
+      <DependentUpon>Grafik1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaRapor.resx">
+      <DependentUpon>HastaRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opening.resx">
+      <DependentUpon>Opening.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +140,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RandevuAlma.resx">
+      <DependentUpon>RandevuAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RandevuUpdate.resx">
+      <DependentUpon>RandevuUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecAnaSayfa.resx">
+      <DependentUpon>SecAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecLogin.resx">
+      <DependentUpon>SecLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +174,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Adsız tasarım %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{40e2e9c7-2c41-407a-8ffc-ba77d0f5c113}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="EntityLayer\EntityLayer.csproj">
+      <Project>{5560d7c6-699b-427a-aec3-85dfc82f3dfe}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="LogicLayer\LogicLayer.csproj">
+      <Project>{0c94991d-d8bc-42b5-946c-1684e51dbc0e}</Project>
+      <Name>LogicLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
