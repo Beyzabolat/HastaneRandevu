@@ -118,5 +118,10 @@ namespace HastaneRandevu
                 e.Handled = true;
             }
         }
+
+        private void comboBox_Bolum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

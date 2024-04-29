@@ -38,6 +38,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox_Dakika = new System.Windows.Forms.ComboBox();
+            this.comboBox_Saat = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox_Doktoradi = new System.Windows.Forms.ComboBox();
+            this.comboBox_Bolum = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_TCKN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,11 +52,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Telefon = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox_Bolum = new System.Windows.Forms.ComboBox();
-            this.comboBox_Doktoradi = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox_Saat = new System.Windows.Forms.ComboBox();
-            this.comboBox_Dakika = new System.Windows.Forms.ComboBox();
             this.btn_DocLogin = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -167,6 +167,66 @@
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hastane Bilgileri";
+            // 
+            // comboBox_Dakika
+            // 
+            this.comboBox_Dakika.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.comboBox_Dakika.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox_Dakika.FormattingEnabled = true;
+            this.comboBox_Dakika.ItemHeight = 23;
+            this.comboBox_Dakika.Location = new System.Drawing.Point(277, 270);
+            this.comboBox_Dakika.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Dakika.Name = "comboBox_Dakika";
+            this.comboBox_Dakika.Size = new System.Drawing.Size(219, 31);
+            this.comboBox_Dakika.TabIndex = 9;
+            // 
+            // comboBox_Saat
+            // 
+            this.comboBox_Saat.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.comboBox_Saat.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox_Saat.FormattingEnabled = true;
+            this.comboBox_Saat.ItemHeight = 23;
+            this.comboBox_Saat.Location = new System.Drawing.Point(52, 270);
+            this.comboBox_Saat.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Saat.Name = "comboBox_Saat";
+            this.comboBox_Saat.Size = new System.Drawing.Size(219, 31);
+            this.comboBox_Saat.TabIndex = 8;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Corbel", 12F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(52, 213);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(445, 32);
+            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // comboBox_Doktoradi
+            // 
+            this.comboBox_Doktoradi.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.comboBox_Doktoradi.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox_Doktoradi.FormattingEnabled = true;
+            this.comboBox_Doktoradi.ItemHeight = 23;
+            this.comboBox_Doktoradi.Location = new System.Drawing.Point(192, 167);
+            this.comboBox_Doktoradi.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Doktoradi.Name = "comboBox_Doktoradi";
+            this.comboBox_Doktoradi.Size = new System.Drawing.Size(304, 31);
+            this.comboBox_Doktoradi.TabIndex = 6;
+            // 
+            // comboBox_Bolum
+            // 
+            this.comboBox_Bolum.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.comboBox_Bolum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox_Bolum.FormattingEnabled = true;
+            this.comboBox_Bolum.ItemHeight = 23;
+            this.comboBox_Bolum.Location = new System.Drawing.Point(192, 111);
+            this.comboBox_Bolum.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Bolum.Name = "comboBox_Bolum";
+            this.comboBox_Bolum.Size = new System.Drawing.Size(304, 31);
+            this.comboBox_Bolum.TabIndex = 5;
+            this.comboBox_Bolum.SelectedIndexChanged += new System.EventHandler(this.comboBox_Bolum_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -290,65 +350,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
-            // 
-            // comboBox_Bolum
-            // 
-            this.comboBox_Bolum.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.comboBox_Bolum.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBox_Bolum.FormattingEnabled = true;
-            this.comboBox_Bolum.ItemHeight = 23;
-            this.comboBox_Bolum.Location = new System.Drawing.Point(192, 111);
-            this.comboBox_Bolum.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_Bolum.Name = "comboBox_Bolum";
-            this.comboBox_Bolum.Size = new System.Drawing.Size(304, 31);
-            this.comboBox_Bolum.TabIndex = 5;
-            // 
-            // comboBox_Doktoradi
-            // 
-            this.comboBox_Doktoradi.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.comboBox_Doktoradi.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBox_Doktoradi.FormattingEnabled = true;
-            this.comboBox_Doktoradi.ItemHeight = 23;
-            this.comboBox_Doktoradi.Location = new System.Drawing.Point(192, 167);
-            this.comboBox_Doktoradi.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_Doktoradi.Name = "comboBox_Doktoradi";
-            this.comboBox_Doktoradi.Size = new System.Drawing.Size(304, 31);
-            this.comboBox_Doktoradi.TabIndex = 6;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Corbel", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(52, 213);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(445, 32);
-            this.dateTimePicker1.TabIndex = 7;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // comboBox_Saat
-            // 
-            this.comboBox_Saat.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.comboBox_Saat.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBox_Saat.FormattingEnabled = true;
-            this.comboBox_Saat.ItemHeight = 23;
-            this.comboBox_Saat.Location = new System.Drawing.Point(52, 270);
-            this.comboBox_Saat.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_Saat.Name = "comboBox_Saat";
-            this.comboBox_Saat.Size = new System.Drawing.Size(219, 31);
-            this.comboBox_Saat.TabIndex = 8;
-            // 
-            // comboBox_Dakika
-            // 
-            this.comboBox_Dakika.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.comboBox_Dakika.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBox_Dakika.FormattingEnabled = true;
-            this.comboBox_Dakika.ItemHeight = 23;
-            this.comboBox_Dakika.Location = new System.Drawing.Point(277, 270);
-            this.comboBox_Dakika.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_Dakika.Name = "comboBox_Dakika";
-            this.comboBox_Dakika.Size = new System.Drawing.Size(219, 31);
-            this.comboBox_Dakika.TabIndex = 9;
             // 
             // btn_DocLogin
             // 

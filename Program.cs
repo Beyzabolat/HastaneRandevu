@@ -16,7 +16,7 @@ namespace HastaneRandevu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DocAnaSayfa());
+            Application.Run(new Opening());
         }
     }
 }

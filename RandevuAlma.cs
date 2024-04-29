@@ -50,6 +50,12 @@ namespace HastaneRandevu
         private void RandevuAlma_Load(object sender, EventArgs e)
         {
             dateTimePicker1.MinDate = DateTime.Now;
+            OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);              //bu kod parçası, seçilen bölüme göre
+            while (dr.Read())                                                       //doktorların doktoradi comboBox'unda listelenmesini
+            {                                                                       //sağlar.
+                comboBox_Doktoradi.Items.Add(dr["DocAD"] + " " + dr["DocSOYAD"]);
+            }
+            dr.Close();
 
         }
         private void comboBox_Bolum1_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,6 +111,11 @@ namespace HastaneRandevu
                 MessageBox.Show("Hafta sonları seçilemez!");                //dateTimePicker üzerinde hafta sonunun
                 dateTimePicker1.Value = DateTime.Now.AddDays(2);            //seçilmemesini sağlar
             }
+        }
+
+        private void comboBox_Bolum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

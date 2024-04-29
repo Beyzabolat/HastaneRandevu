@@ -9,7 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using EntityLayer;
+using DataAccessLayer;
+using LogicLayer;
 namespace HastaneRandevu
 {
     public partial class DocLogin : Form
@@ -103,5 +105,42 @@ namespace HastaneRandevu
                 }
             }
         }
+
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "Kullanıcı Adınız")
+            {
+                txtUser.Text = "";
+                txtUser.ForeColor = Color.Black; // Opsiyonel: Siyah renkte görünecek
+            }
+        }
+
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUser.Text))
+            {
+                txtUser.Text = "Kullanıcı Adınız";
+                txtUser.ForeColor = Color.Gray; // Opsiyonel: Gri renkte görünecek
+            }
+        }
+
+        private void txtPw_Enter(object sender, EventArgs e)
+        {
+            if (txtPw.Text == "********")
+            {
+                txtPw.Text = "";
+                txtPw.ForeColor = Color.Black; // Opsiyonel: Siyah renkte görünecek
+            }
+        }
+
+        private void txtPw_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPw.Text))
+            {
+                txtPw.Text = "********";
+                txtPw.ForeColor = Color.Gray; // Opsiyonel: Gri renkte görünecek
+            }
+        }
+
     }
 }

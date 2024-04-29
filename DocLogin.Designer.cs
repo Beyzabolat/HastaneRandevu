@@ -86,7 +86,9 @@
             this.txtPw.PasswordChar = '*';
             this.txtPw.Size = new System.Drawing.Size(299, 22);
             this.txtPw.TabIndex = 30;
-            this.txtPw.Text = "********";
+            this.txtPw.Text = "\"********\")";
+            this.txtPw.Enter += new System.EventHandler(this.txtPw_Enter);
+            this.txtPw.Leave += new System.EventHandler(this.txtPw_Leave);
             // 
             // txtUser
             // 
@@ -102,6 +104,8 @@
             this.txtUser.TabIndex = 29;
             this.txtUser.Text = "Kullanıcı Adınız";
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // exitTxt
             // 

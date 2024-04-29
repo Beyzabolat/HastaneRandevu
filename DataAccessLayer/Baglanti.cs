@@ -9,7 +9,7 @@ namespace DataAccessLayer
 {
     public class Baglanti
     {
-        public static OleDbConnection bgl = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\YourDatabase.accdb;");
+        public static OleDbConnection bgl = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\admin\\Desktop\\HastaneRandevu\\HastaneRandevuKayıt.accdb;");
 
     }
 }

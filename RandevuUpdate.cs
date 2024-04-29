@@ -12,6 +12,7 @@ using EntityLayer;
 using LogicLayer;
 using System.Data.OleDb;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.SqlClient;
 
 
 namespace HastaneRandevu
@@ -25,7 +26,8 @@ namespace HastaneRandevu
 
         private void btn_List_Click(object sender, EventArgs e)
         {
-
+            List<EntityHst> PerList = LogicHst.LLHstList();
+            dataGridView1.DataSource = PerList;
         }
 
         private void txtMainMenu_Click(object sender, EventArgs e)
@@ -60,5 +62,90 @@ namespace HastaneRandevu
             comboBox_Dakika.Text = dakika;
         }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_Bolum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox_Doktoradi.Items.Clear();
+            OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);                  //bu kod bloğu, Bölüm comboBoxundaki  
+            while (dr.Read())                                                           //seçilen bölüme göre doktorların
+            {                                                                           //doktor comboBoxında listelenmesini sağlar
+                comboBox_Doktoradi.Items.Add(dr["DocAD"] + " " + dr["DocSOYAD"]);
+            }
+            dr.Close();
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+            if (txt_HastaAdi.Text == "" || txt_HastaSoyadi.Text == "" || txt_TCKN.Text == "" || txt_Telefon.Text == "" +
+                "" || comboBox_Bolum.Text == "" || comboBox_Doktoradi.Text == "" || comboBox_Saat.Text == "" || comboBox_Dakika.Text == "")
+            {
+                MessageBox.Show("Hiçbir Alan Boş Bırakılamaz", "!!!");
+            }
+            else
+            {
+                EntityHst ent = new EntityHst();
+                ent.Hstid = Convert.ToInt32(textBox1.Text);
+                ent.Hstname = txt_HastaAdi.Text;
+                ent.Hstsurname = txt_HastaSoyadi.Text;
+                ent.Hsttckn = txt_TCKN.Text;
+                ent.Hstphone = txt_Telefon.Text;
+                ent.Hstbolum = comboBox_Bolum.Text;
+                ent.Docname = comboBox_Doktoradi.Text;
+                ent.Tarih = dateTimePicker1.Value;
+                ent.Saat = comboBox_Saat.Text + ":" + comboBox_Dakika.Text;
+                LogicHst.LLHstGuncelle(ent);
+
+                List<EntityHst> PerList = LogicHst.LLHstList();
+                dataGridView1.DataSource = PerList;
+            }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            EntityHst ent = new EntityHst();
+            ent.Hstid = Convert.ToInt32(textBox1.Text);
+            LogicHst.LLHstSil(ent.Hstid);
+
+            List<EntityHst> PerList = LogicHst.LLHstList();
+            dataGridView1.DataSource = PerList;
+        }
+
+        private void comboBox_Doktoradi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txt_TCKN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            int maxLength = 11;
+            if (txt_TCKN.Text.Length >= maxLength && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_Telefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            int maxLength = 11;
+            if (txt_Telefon.Text.Length >= maxLength && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

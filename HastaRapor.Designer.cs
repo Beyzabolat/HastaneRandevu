@@ -40,6 +40,7 @@
             this.btn_List = new System.Windows.Forms.Button();
             this.btn_Mail = new System.Windows.Forms.Button();
             this.btn_Pdf = new System.Windows.Forms.Button();
+            this.txt_Mail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.txtMainMenu.Size = new System.Drawing.Size(107, 29);
             this.txtMainMenu.TabIndex = 40;
             this.txtMainMenu.Text = "Ana Menü";
+            this.txtMainMenu.Click += new System.EventHandler(this.txtMainMenu_Click);
             // 
             // label1
             // 
@@ -92,7 +94,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.AntiqueWhite;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(210)))), ((int)(((byte)(216)))));
@@ -111,10 +113,11 @@
             this.btn_Kaydet.Location = new System.Drawing.Point(45, 73);
             this.btn_Kaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Kaydet.Name = "btn_Kaydet";
-            this.btn_Kaydet.Size = new System.Drawing.Size(248, 69);
+            this.btn_Kaydet.Size = new System.Drawing.Size(287, 97);
             this.btn_Kaydet.TabIndex = 19;
             this.btn_Kaydet.Text = "RAPORU KAYDET";
             this.btn_Kaydet.UseVisualStyleBackColor = false;
+            this.btn_Kaydet.Click += new System.EventHandler(this.btn_Kaydet_Click);
             // 
             // btn_Sil
             // 
@@ -124,10 +127,11 @@
             this.btn_Sil.Location = new System.Drawing.Point(45, 196);
             this.btn_Sil.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sil.Name = "btn_Sil";
-            this.btn_Sil.Size = new System.Drawing.Size(248, 69);
+            this.btn_Sil.Size = new System.Drawing.Size(287, 79);
             this.btn_Sil.TabIndex = 19;
             this.btn_Sil.Text = "RANDEVUYU SİL";
             this.btn_Sil.UseVisualStyleBackColor = false;
+            this.btn_Sil.Click += new System.EventHandler(this.btn_Sil_Click);
             // 
             // txt_Rapor
             // 
@@ -151,6 +155,7 @@
             this.btn_List.TabIndex = 19;
             this.btn_List.Text = "LİSTELE";
             this.btn_List.UseVisualStyleBackColor = false;
+            this.btn_List.Click += new System.EventHandler(this.btn_List_Click);
             // 
             // btn_Mail
             // 
@@ -164,6 +169,7 @@
             this.btn_Mail.TabIndex = 19;
             this.btn_Mail.Text = "MAİL YOLLA";
             this.btn_Mail.UseVisualStyleBackColor = false;
+            this.btn_Mail.Click += new System.EventHandler(this.btn_Mail_Click);
             // 
             // btn_Pdf
             // 
@@ -178,6 +184,14 @@
             this.btn_Pdf.Text = "PDF KAYDET";
             this.btn_Pdf.UseVisualStyleBackColor = false;
             // 
+            // txt_Mail
+            // 
+            this.txt_Mail.Location = new System.Drawing.Point(939, 374);
+            this.txt_Mail.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Mail.Name = "txt_Mail";
+            this.txt_Mail.Size = new System.Drawing.Size(245, 22);
+            this.txt_Mail.TabIndex = 41;
+            // 
             // HastaRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,6 +199,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1248, 662);
+            this.Controls.Add(this.txt_Mail);
             this.Controls.Add(this.btn_Pdf);
             this.Controls.Add(this.btn_Mail);
             this.Controls.Add(this.btn_List);
@@ -219,5 +234,6 @@
         private System.Windows.Forms.Button btn_List;
         private System.Windows.Forms.Button btn_Mail;
         private System.Windows.Forms.Button btn_Pdf;
+        private System.Windows.Forms.TextBox txt_Mail;
     }
 }

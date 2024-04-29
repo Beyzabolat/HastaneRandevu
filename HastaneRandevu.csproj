@@ -112,6 +112,12 @@
     <Compile Include="SecLogin.Designer.cs">
       <DependentUpon>SecLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="SekreterIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SekreterIslemleri.Designer.cs">
+      <DependentUpon>SekreterIslemleri.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DocAnaSayfa.resx">
       <DependentUpon>DocAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SecLogin.resx">
       <DependentUpon>SecLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SekreterIslemleri.resx">
+      <DependentUpon>SekreterIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
