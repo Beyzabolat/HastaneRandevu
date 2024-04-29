@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DocLogin));
             this.loginTxt = new System.Windows.Forms.Label();
             this.mainmenuTxt = new System.Windows.Forms.Label();
@@ -38,9 +39,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Login = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btn_ShowPw = new System.Windows.Forms.Button();
             this.usernamePic = new System.Windows.Forms.PictureBox();
             this.passwordPic = new System.Windows.Forms.PictureBox();
             this.loginPic = new System.Windows.Forms.PictureBox();
+            this.btn_HidePw = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginPic)).BeginInit();
@@ -75,7 +79,7 @@
             // 
             // txtPw
             // 
-            this.txtPw.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtPw.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtPw.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -86,13 +90,13 @@
             this.txtPw.PasswordChar = '*';
             this.txtPw.Size = new System.Drawing.Size(299, 22);
             this.txtPw.TabIndex = 30;
-            this.txtPw.Text = "\"********\")";
+            this.txtPw.TextChanged += new System.EventHandler(this.txtPw_TextChanged);
             this.txtPw.Enter += new System.EventHandler(this.txtPw_Enter);
             this.txtPw.Leave += new System.EventHandler(this.txtPw_Leave);
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtUser.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -171,6 +175,28 @@
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "eye.png");
+            // 
+            // btn_ShowPw
+            // 
+            this.btn_ShowPw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ShowPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btn_ShowPw.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_ShowPw.ImageKey = "eye.png";
+            this.btn_ShowPw.ImageList = this.ımageList1;
+            this.btn_ShowPw.Location = new System.Drawing.Point(313, 342);
+            this.btn_ShowPw.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ShowPw.Name = "btn_ShowPw";
+            this.btn_ShowPw.Size = new System.Drawing.Size(69, 59);
+            this.btn_ShowPw.TabIndex = 38;
+            this.btn_ShowPw.Text = "button1";
+            this.btn_ShowPw.UseVisualStyleBackColor = true;
+            this.btn_ShowPw.Click += new System.EventHandler(this.btn_ShowPw_Click);
+            // 
             // usernamePic
             // 
             this.usernamePic.Image = global::HastaneRandevu.Properties.Resources._3;
@@ -204,12 +230,29 @@
             this.loginPic.TabIndex = 15;
             this.loginPic.TabStop = false;
             // 
+            // btn_HidePw
+            // 
+            this.btn_HidePw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HidePw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btn_HidePw.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_HidePw.ImageKey = "eye.png";
+            this.btn_HidePw.ImageList = this.ımageList1;
+            this.btn_HidePw.Location = new System.Drawing.Point(314, 342);
+            this.btn_HidePw.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_HidePw.Name = "btn_HidePw";
+            this.btn_HidePw.Size = new System.Drawing.Size(69, 59);
+            this.btn_HidePw.TabIndex = 39;
+            this.btn_HidePw.UseVisualStyleBackColor = true;
+            this.btn_HidePw.Click += new System.EventHandler(this.btn_HidePw_Click);
+            // 
             // DocLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(416, 575);
+            this.Controls.Add(this.btn_HidePw);
+            this.Controls.Add(this.btn_ShowPw);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.mainmenuTxt);
             this.Controls.Add(this.txtPw);
@@ -249,5 +292,8 @@
         private System.Windows.Forms.PictureBox passwordPic;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button btn_ShowPw;
+        private System.Windows.Forms.Button btn_HidePw;
     }
 }

@@ -1,10 +1,12 @@
 ﻿using EntityLayer;
+using iTextSharp.text.pdf;
 using LogicLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
@@ -64,39 +66,50 @@ namespace HastaneRandevu
 
         private void btn_Mail_Click(object sender, EventArgs e)
         {
-            if (txt_Mail.Text == "" || txt_Rapor.Text == "")
+            if (string.IsNullOrWhiteSpace(txt_Mail.Text) || string.IsNullOrWhiteSpace(txt_Rapor.Text))
             {
                 MessageBox.Show("Boş Alan Bırakmayınız !!!");
             }
             else
             {
-                MailMessage mesaj = new MailMessage();
-                mesaj.From = new MailAddress("yigitkaraoglan81@outlook.com");                                       //Bu kod, kullanıcının girdiği
-                mesaj.To.Add(txt_Mail.Text);                                                                        //e-posta ve rapor alanlarının
-                mesaj.Subject = "# Karaoğlan Hastanesi Doktor Raporu #";                                            //boş olup olmadığını kontrol eder.
-                mesaj.Body = txt_Rapor.Text;                                                                        //Eğer boşsa, kullanıcıya "Boş Alan Bırakmayınız !!!" mesajı gösterir.
-                SmtpClient a = new SmtpClient();                                                                    //Eğer alanlar doluysa, kullanıcının girdiği e-posta adresine
-                a.Credentials = new System.Net.NetworkCredential("yigitkaraoglan81@outlook.com", "Gorsel123");      //"# Karaoğlan Hastanesi Doktor Raporu #" konulu ve
-                a.Port = 587;                                                                                       //içeriği kullanıcının girdiği rapor olan bir e-posta gönderir.
-                a.Host = "smtp-mail.outlook.com";                                                                   //E-posta göndermek için SmtpClient sınıfı kullanılır
-                a.EnableSsl = true;                                                                                 //ve gönderilirken Outlook.com SMTP sunucusu kullanılır.
-                object userState = mesaj;                                                                           //E-posta gönderme sırasında bir hata oluşursa,
-                                                                                                                    //kullanıcıya hata mesajı gösterilir.
                 try
                 {
-                    a.SendAsync(mesaj, (object)mesaj);
+                    var mailAddress = new MailAddress(txt_Mail.Text); // E-posta adresini kontrol et
+                    MailMessage mesaj = new MailMessage();
+                    mesaj.From = new MailAddress("beybolat62@gmail.com");
+                    mesaj.To.Add(mailAddress.Address); // Geçerli ise, e-posta adresini kullan
+                    mesaj.Subject = "# Sağlıklı Yaşam Hastanesi Doktor Raporu #";
+                    mesaj.Body = txt_Rapor.Text;
+
+                    // SmtpClient yapılandırması
+                    SmtpClient a = new SmtpClient();
+                    a.Credentials = new System.Net.NetworkCredential("beybolat62@gmail.com", "035805BeyzA.");
+                    a.Port = 587;
+                    a.Host = "smtp.gmail.com";
+                    a.EnableSsl = true;
+
+                    // E-postayı gönderme
+                    a.Send(mesaj);
                     MessageBox.Show("Mail Gönderilmiştir");
                 }
-
+                catch (FormatException)
+                {
+                    MessageBox.Show("Geçersiz e-posta adresi!");
+                }
                 catch (SmtpException ex)
                 {
-
-                    System.Windows.Forms.MessageBox.Show(ex.Message, "Mail Gönderme Hatasi");
+                    MessageBox.Show("Mail gönderme hatası: " + ex.Message);
                 }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                }
             }
-
         }
+
+
+
+
 
         private void txtMainMenu_Click(object sender, EventArgs e)
         {
@@ -106,5 +119,39 @@ namespace HastaneRandevu
             dok.Show();
             this.Close();
         }
+
+        private void HastaRapor_Load(object sender, EventArgs e)
+        {
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
+
+        }
+
+        private void btn_Pdf_Click(object sender, EventArgs e)
+        {
+            // PDF oluşturma işlemleri
+            try
+            {
+                // PDF dosyasının adı ve konumu
+                string pdfFilePath = "C:\\Users\\admin\\Desktop\\FileName.pdf";
+
+                // PDF belgesi oluştur
+                iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document();
+                PdfWriter.GetInstance(pdfDoc, new FileStream(pdfFilePath, FileMode.Create));
+
+                pdfDoc.Open();
+
+                // PDF'e eklemek istediğiniz metni ekleyin
+                pdfDoc.Add(new iTextSharp.text.Paragraph("PDF Oluşturma Örnegi"));
+
+                pdfDoc.Close();
+
+                MessageBox.Show("PDF oluşturuldu: " + pdfFilePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("PDF oluşturma hatası: " + ex.Message);
+            }
+        }
+
     }
 }

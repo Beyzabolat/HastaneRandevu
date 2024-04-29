@@ -69,12 +69,22 @@ namespace HastaneRandevu
 
         private void comboBox_Bolum_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Önce ComboBox'ı temizleyelim
             comboBox_Doktoradi.Items.Clear();
-            OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);                  //bu kod bloğu, Bölüm comboBoxundaki  
-            while (dr.Read())                                                           //seçilen bölüme göre doktorların
-            {                                                                           //doktor comboBoxında listelenmesini sağlar
+
+            // Seçilen bölüm adını alalım
+            string selectedBolum = comboBox_Bolum.SelectedItem.ToString();
+
+            // LogicLayer'daki LLFilter metodu kullanarak seçilen bölüme uygun doktorları getirelim
+            OleDbDataReader dr = LogicHst.LLFilter(selectedBolum);
+
+            // Doktorları ComboBox'a ekleyelim
+            while (dr.Read())
+            {
                 comboBox_Doktoradi.Items.Add(dr["DocAD"] + " " + dr["DocSOYAD"]);
             }
+
+            // DataReader'ı kapatmayı unutmayalım
             dr.Close();
         }
 
@@ -146,6 +156,43 @@ namespace HastaneRandevu
             {
                 e.Handled = true;
             }
+        }
+
+        private void RandevuUpdate_Load(object sender, EventArgs e)
+        {
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
+
+            // Saatleri ComboBox'a ekleyelim
+            for (int i = 0; i <= 23; i++)
+            {
+                comboBox_Saat.Items.Add(i.ToString("00")); // Saatleri iki haneli olarak ekleyelim (örneğin: "01", "02", ..., "23")
+            }
+
+            // Dakikaları ComboBox'a ekleyelim
+            for (int i = 0; i <= 59; i++)
+            {
+                comboBox_Dakika.Items.Add(i.ToString("00")); // Dakikaları iki haneli olarak ekleyelim (örneğin: "00", "01", ..., "59")
+            }
+
+            // İsteğe bağlı olarak, başlangıçta varsayılan saat ve dakikayı seçebilirsiniz
+            comboBox_Saat.SelectedIndex = 0;
+            comboBox_Dakika.SelectedIndex = 0;
+            // Örnek bir bölüm listesi oluşturalım
+            List<string> bolumListesi = new List<string>();
+            bolumListesi.Add("Kardiyoloji");
+            bolumListesi.Add("Ortopedi");
+            bolumListesi.Add("Dahiliye");
+            // ComboBox'ın veri kaynağını bu listeye bağlayalım
+            comboBox_Bolum.DataSource = bolumListesi;
+            // DataGridView'deki CellClick veya CellContentClick olaylarına listeleme metodunu atayalım
+
+            dateTimePicker1.MinDate = DateTime.Now;
+            OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);              //bu kod parçası, seçilen bölüme göre
+            while (dr.Read())                                                       //doktorların doktoradi comboBox'unda listelenmesini
+            {                                                                       //sağlar.
+                comboBox_Doktoradi.Items.Add(dr["DocAD"] + " " + dr["DocSOYAD"]);
+            }
+            dr.Close();
         }
     }
 }

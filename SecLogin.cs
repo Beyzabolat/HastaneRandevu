@@ -40,6 +40,7 @@ namespace HastaneRandevu
                 txtUser2.Text = "Kullanıcı Adınız";
             }
         }
+
         private void txtPwLeave2(object sender, EventArgs e)
         {
             if (txtPw2.Text.Equals(@""))
@@ -53,8 +54,10 @@ namespace HastaneRandevu
             if (txtPw2.Text.Equals(@"********"))
             {
                 txtPw2.Text = "";
+                txtPw2.PasswordChar = '*'; // Şifre alanındaki karakterleri göster
             }
         }
+
 
         private void mainmenuTxt_Click(object sender, EventArgs e)
         {
@@ -87,5 +90,44 @@ namespace HastaneRandevu
             }
 
         }
+
+        private void txtUser2_Enter(object sender, EventArgs e)
+        {
+            if (txtUser2.Text == "Kullanıcı Adınız")
+            {
+                txtUser2.Text = "";
+                txtUser2.ForeColor = Color.Gray; // Opsiyonel: Siyah renkte görünecek
+            }
+        }
+
+        private void txtUser2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUser2.Text))
+            {
+                txtUser2.Text = "Kullanıcı Adınız";
+                txtUser2.ForeColor = Color.Gray; // Opsiyonel: Gri renkte görünecek
+            }
+        }
+
+        private void txtPw2_Enter(object sender, EventArgs e)
+        {
+            if (txtPw2.Text == "********")
+            {
+                txtPw2.Text = "";
+                txtPw2.ForeColor = Color.Gray; // Opsiyonel: Siyah renkte görünecek
+                txtPw2.PasswordChar = '*'; // Şifre alanındaki karakterleri göster
+            }
+        }
+
+        private void txtPw2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPw2.Text))
+            {
+                txtPw2.Text = "********";
+                txtPw2.ForeColor = Color.Gray; // Opsiyonel: Gri renkte görünecek
+                txtPw2.PasswordChar = '\0'; // Şifre alanındaki karakterleri gizle
+            }
+        }
+
     }
 }

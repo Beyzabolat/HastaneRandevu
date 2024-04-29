@@ -51,11 +51,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox_Bolum = new System.Windows.Forms.ComboBox();
             this.txtMainMenu = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_List = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(428, 44);
+            this.label1.Location = new System.Drawing.Point(613, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(402, 52);
@@ -80,7 +80,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(941, 208);
+            this.dataGridView1.Size = new System.Drawing.Size(1003, 221);
             this.dataGridView1.TabIndex = 103;
             // 
             // label10
@@ -88,7 +88,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(448, 65);
+            this.label10.Location = new System.Drawing.Point(457, 65);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(96, 31);
@@ -98,7 +98,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(593, 129);
+            this.panel5.Location = new System.Drawing.Point(654, 135);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(304, 1);
@@ -130,7 +130,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label11.Location = new System.Drawing.Point(448, 111);
+            this.label11.Location = new System.Drawing.Point(457, 111);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 31);
@@ -153,7 +153,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(593, 178);
+            this.panel2.Location = new System.Drawing.Point(654, 184);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(304, 1);
@@ -176,7 +176,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label9.Location = new System.Drawing.Point(448, 160);
+            this.label9.Location = new System.Drawing.Point(457, 160);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(126, 31);
@@ -219,7 +219,7 @@
             this.txt_Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Username.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_Username.Location = new System.Drawing.Point(592, 103);
+            this.txt_Username.Location = new System.Drawing.Point(653, 109);
             this.txt_Username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Username.Multiline = true;
             this.txt_Username.Name = "txt_Username";
@@ -258,7 +258,7 @@
             this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Password.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_Password.Location = new System.Drawing.Point(592, 153);
+            this.txt_Password.Location = new System.Drawing.Point(653, 159);
             this.txt_Password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Password.Multiline = true;
             this.txt_Password.Name = "txt_Password";
@@ -306,7 +306,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(941, 246);
+            this.groupBox1.Size = new System.Drawing.Size(1003, 246);
             this.groupBox1.TabIndex = 105;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doktor Bilgileri";
@@ -318,7 +318,7 @@
             this.comboBox_Bolum.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.comboBox_Bolum.FormattingEnabled = true;
             this.comboBox_Bolum.ItemHeight = 23;
-            this.comboBox_Bolum.Location = new System.Drawing.Point(592, 39);
+            this.comboBox_Bolum.Location = new System.Drawing.Point(654, 65);
             this.comboBox_Bolum.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_Bolum.Name = "comboBox_Bolum";
             this.comboBox_Bolum.Size = new System.Drawing.Size(304, 31);
@@ -339,17 +339,6 @@
             this.txtMainMenu.TabIndex = 34;
             this.txtMainMenu.Text = "Ana Menü";
             this.txtMainMenu.Click += new System.EventHandler(this.txtMainMenu_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__3_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(359, 142);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 104;
-            this.pictureBox1.TabStop = false;
             // 
             // btn_List
             // 
@@ -376,7 +365,7 @@
             this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Add.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Add.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Add.Location = new System.Drawing.Point(253, 408);
+            this.btn_Add.Location = new System.Drawing.Point(275, 408);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(229, 70);
@@ -393,7 +382,7 @@
             this.btn_Update.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Update.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Update.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Update.Location = new System.Drawing.Point(491, 410);
+            this.btn_Update.Location = new System.Drawing.Point(532, 410);
             this.btn_Update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(229, 70);
@@ -410,7 +399,7 @@
             this.btn_Delete.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Delete.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Delete.Location = new System.Drawing.Point(728, 410);
+            this.btn_Delete.Location = new System.Drawing.Point(786, 410);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(229, 70);
@@ -419,13 +408,24 @@
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__3_;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(359, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 104;
+            this.pictureBox1.TabStop = false;
+            // 
             // DoktorIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(965, 715);
+            this.ClientSize = new System.Drawing.Size(1028, 735);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Add);
@@ -439,6 +439,7 @@
             this.Name = "DoktorIslemleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doktor İşlemleri";
+            this.Load += new System.EventHandler(this.DoktorIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

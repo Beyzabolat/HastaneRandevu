@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using EntityLayer;
 using DataAccessLayer;
 using LogicLayer;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HastaneRandevu
 {
@@ -21,73 +20,42 @@ namespace HastaneRandevu
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void DoktorIslemleri_Load(object sender, EventArgs e)
         {
-
+            List<string> bolumListesi = new List<string>();
+            bolumListesi.Add("Kardiyoloji");
+            bolumListesi.Add("Ortopedi");
+            bolumListesi.Add("Dahiliye");
+            comboBox_Bolum.DataSource = bolumListesi;
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
         }
 
         private void btn_List_Click(object sender, EventArgs e)
         {
-            List<EntityDoc> PerList = LogicDoc.LLDocList();
-            dataGridView1.DataSource = PerList;
+            List<EntityDoc> docList = LogicDoc.LLDocList();
+            dataGridView1.DataSource = docList;
         }
-
-        private void txtMainMenu_Click(object sender, EventArgs e)
+        private void comboBox_Bolum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SecAnaSayfa secAnaSayfa = new SecAnaSayfa();
-            secAnaSayfa.Show();
-            this.Hide();
+
+        }
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
         private void listeleme(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[index];
-            textBox1.Text = selectedRow.Cells[0].Value.ToString();              //Bu kod bloğu, dataGridView üzerinde
-            txt_DoktorAdi.Text = selectedRow.Cells[1].Value.ToString();         //tıklanan sekreterin tüm bilgilerini
-            txt_DoktorSoyadi.Text = selectedRow.Cells[2].Value.ToString();      //gerekli textBoxların
-            comboBox_Bolum.Text = selectedRow.Cells[3].Value.ToString();        //üzerine çekilmesini sağlar
-            txt_Telefon.Text = selectedRow.Cells[4].Value.ToString();
-            txt_Username.Text = selectedRow.Cells[5].Value.ToString();
-            txt_Password.Text = selectedRow.Cells[6].Value.ToString();
-        }
-        private void DoktorEkle_Load(object sender, EventArgs e)
-        {                                                       //Doktor ID'si primary key olduğu için değiştirilebilir
-            textBox1.ReadOnly = true;                           //olmaması gerekiyor. Bu yüzden ID textboxu readonly yapılır.
-        }
-
-        private void btn_Update_Click(object sender, EventArgs e)
-        {
-
-            if (txt_DoktorAdi.Text == "" || txt_DoktorSoyadi.Text == "" || txt_Telefon.Text == "" +
-             "" || comboBox_Bolum.Text == "" || txt_Username.Text == "" || txt_Password.Text == "")
+            if (e.RowIndex >= 0)
             {
-                MessageBox.Show("Hiçbir Alan Boş Bırakılamaz", "!!!");
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+                textBox1.Text = selectedRow.Cells[0].Value.ToString();
+                txt_DoktorAdi.Text = selectedRow.Cells[1].Value.ToString();
+                txt_DoktorSoyadi.Text = selectedRow.Cells[2].Value.ToString();
+                comboBox_Bolum.Text = selectedRow.Cells[3].Value.ToString();
+                txt_Telefon.Text = selectedRow.Cells[4].Value.ToString();
+                txt_Username.Text = selectedRow.Cells[5].Value.ToString();
+                txt_Password.Text = selectedRow.Cells[6].Value.ToString();
             }
-            else
-            {
-                EntityDoc ent = new EntityDoc();
-                ent.Docid = Convert.ToInt32(textBox1.Text);
-                ent.Docname = txt_DoktorAdi.Text;
-                ent.Docsurname = txt_DoktorSoyadi.Text;
-                ent.Docbranch = comboBox_Bolum.Text;
-                ent.Docphone = txt_Telefon.Text;
-                ent.Docusername = txt_Username.Text;
-                ent.Docpassword = txt_Password.Text;
-                LogicDoc.LLDocGuncelle(ent);
-
-                List<EntityDoc> PerList = LogicDoc.LLDocList();
-                dataGridView1.DataSource = PerList;
-            }
-        }
-
-        private void btn_Delete_Click(object sender, EventArgs e)
-        {
-            EntityDoc ent = new EntityDoc();                      //Bu kod parçacığı, bir EntityDoc
-            ent.Docid = Convert.ToInt32(textBox1.Text);           //nesnesi oluşturur ve Docid özelliğini
-            LogicDoc.LLDocSil(ent.Docid);                         //textBox1'den alınan değerle atar. Ardından,
-                                                                  //LogicDoc sınıfındaki LLDocSil metodu bu Docid değerini
-            List<EntityDoc> PerList = LogicDoc.LLDocList();       //kullanarak belirli doktoru siler. Daha sonra, LogicDoc
-            dataGridView1.DataSource = PerList;
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -101,17 +69,63 @@ namespace HastaneRandevu
             ent.Docpassword = txt_Password.Text;
             LogicDoc.LLDocEkle(ent);
 
-            List<EntityDoc> PerList = LogicDoc.LLDocList();
-            dataGridView1.DataSource = PerList;
+            List<EntityDoc> docList = LogicDoc.LLDocList();
+            dataGridView1.DataSource = docList;
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            if (txt_DoktorAdi.Text == "" || txt_DoktorSoyadi.Text == "" || txt_Telefon.Text == "" +
+             "" || comboBox_Bolum.Text == "" || txt_Username.Text == "" || txt_Password.Text == "")
+            {
+                MessageBox.Show("Hiçbir Alan Boş Bırakılamaz", "!!!");
+            }
+            else
+            {
+                if (int.TryParse(textBox1.Text, out int docId))
+                {
+                    EntityDoc ent = new EntityDoc();
+                    ent.Docid = docId;
+                    ent.Docname = txt_DoktorAdi.Text;
+                    ent.Docsurname = txt_DoktorSoyadi.Text;
+                    ent.Docbranch = comboBox_Bolum.Text;
+                    ent.Docphone = txt_Telefon.Text;
+                    ent.Docusername = txt_Username.Text;
+                    ent.Docpassword = txt_Password.Text;
+                    LogicDoc.LLDocGuncelle(ent);
+
+                    List<EntityDoc> docList = LogicDoc.LLDocList();
+                    dataGridView1.DataSource = docList;
+                }
+                else
+                {
+                    MessageBox.Show("Geçersiz doktor ID değeri. Lütfen geçerli bir ID girin.", "Hata");
+                }
+            }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox1.Text, out int docId))
+            {
+                LogicDoc.LLDocSil(docId);
+
+                List<EntityDoc> docList = LogicDoc.LLDocList();
+                dataGridView1.DataSource = docList;
+            }
+            else
+            {
+                MessageBox.Show("Geçersiz doktor ID değeri. Lütfen geçerli bir ID girin.", "Hata");
+            }
         }
 
         private void txt_Telefon_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))                 //numarasının girildiği textboxun
-            {                                                                           //sadece sayılardan oluşmasını sağlar.
-                e.Handled = true;                                                       //Ayrıca telefon numaraları 11
-            }                                                                           //karakterden oluştuğu için textbox
-                                                                                        //içine maksimum 11 karakter girilebilmesini sağlar.
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
             int maxLength = 11;
             if (txt_Telefon.Text.Length >= maxLength && e.KeyChar != (char)Keys.Back)
             {
@@ -119,9 +133,11 @@ namespace HastaneRandevu
             }
         }
 
-        private void comboBox_Bolum_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtMainMenu_Click(object sender, EventArgs e)
         {
-
+            SecAnaSayfa secAnaSayfa = new SecAnaSayfa();
+            secAnaSayfa.Show();
+            this.Hide();
         }
     }
 }

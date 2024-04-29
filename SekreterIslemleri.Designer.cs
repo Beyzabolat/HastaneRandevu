@@ -83,15 +83,16 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(941, 246);
+            this.groupBox1.Size = new System.Drawing.Size(1062, 257);
             this.groupBox1.TabIndex = 113;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sekreter Bilgileri";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(593, 129);
+            this.panel5.Location = new System.Drawing.Point(687, 129);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(304, 1);
@@ -123,7 +124,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label11.Location = new System.Drawing.Point(448, 111);
+            this.label11.Location = new System.Drawing.Point(475, 111);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 31);
@@ -146,7 +147,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(593, 178);
+            this.panel2.Location = new System.Drawing.Point(687, 178);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(304, 1);
@@ -169,7 +170,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label9.Location = new System.Drawing.Point(448, 160);
+            this.label9.Location = new System.Drawing.Point(475, 160);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(126, 31);
@@ -227,7 +228,7 @@
             this.txt_Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Username.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_Username.Location = new System.Drawing.Point(592, 103);
+            this.txt_Username.Location = new System.Drawing.Point(686, 103);
             this.txt_Username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Username.Multiline = true;
             this.txt_Username.Name = "txt_Username";
@@ -266,7 +267,7 @@
             this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Password.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_Password.Location = new System.Drawing.Point(592, 153);
+            this.txt_Password.Location = new System.Drawing.Point(686, 153);
             this.txt_Password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Password.Multiline = true;
             this.txt_Password.Name = "txt_Password";
@@ -295,7 +296,7 @@
             this.btn_List.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_List.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_List.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_List.Location = new System.Drawing.Point(17, 409);
+            this.btn_List.Location = new System.Drawing.Point(36, 422);
             this.btn_List.Margin = new System.Windows.Forms.Padding(4);
             this.btn_List.Name = "btn_List";
             this.btn_List.Size = new System.Drawing.Size(229, 70);
@@ -312,7 +313,7 @@
             this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Add.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Add.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Add.Location = new System.Drawing.Point(254, 407);
+            this.btn_Add.Location = new System.Drawing.Point(297, 422);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(229, 70);
@@ -329,7 +330,7 @@
             this.btn_Delete.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Delete.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Delete.Location = new System.Drawing.Point(729, 409);
+            this.btn_Delete.Location = new System.Drawing.Point(828, 422);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(229, 70);
@@ -346,7 +347,7 @@
             this.btn_Update.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Update.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Update.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Update.Location = new System.Drawing.Point(492, 409);
+            this.btn_Update.Location = new System.Drawing.Point(562, 422);
             this.btn_Update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(229, 70);
@@ -362,7 +363,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(941, 208);
+            this.dataGridView1.Size = new System.Drawing.Size(1062, 224);
             this.dataGridView1.TabIndex = 111;
             // 
             // label1
@@ -392,7 +393,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 716);
+            this.ClientSize = new System.Drawing.Size(1088, 727);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_List);
@@ -402,7 +403,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "SekreterIslemleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SekreterIslemleri";
+            this.Load += new System.EventHandler(this.SekreterIslemleri_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

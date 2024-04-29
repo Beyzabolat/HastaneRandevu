@@ -107,5 +107,15 @@ namespace HastaneRandevu
                 e.Handled = true;
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SekreterIslemleri_Load(object sender, EventArgs e)
+        {
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
+        }
     }
 }
