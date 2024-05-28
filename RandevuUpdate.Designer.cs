@@ -49,7 +49,6 @@
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox_Dakika = new System.Windows.Forms.ComboBox();
             this.comboBox_Saat = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -57,10 +56,13 @@
             this.comboBox_Doktoradi = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtMainMenu = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -80,11 +82,11 @@
             this.groupBox1.Controls.Add(this.txt_Telefon);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(9, 158);
+            this.groupBox1.Location = new System.Drawing.Point(84, 337);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(503, 288);
+            this.groupBox1.Size = new System.Drawing.Size(548, 370);
             this.groupBox1.TabIndex = 113;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hasta Bilgileri";
@@ -104,10 +106,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(212, 257);
+            this.panel2.Location = new System.Drawing.Point(204, 314);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 1);
+            this.panel2.Size = new System.Drawing.Size(306, 1);
             this.panel2.TabIndex = 17;
             // 
             // label1
@@ -115,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(14, 240);
+            this.label1.Location = new System.Drawing.Point(42, 290);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 31);
@@ -128,21 +130,21 @@
             this.txt_TCKN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_TCKN.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_TCKN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_TCKN.Location = new System.Drawing.Point(211, 227);
+            this.txt_TCKN.Location = new System.Drawing.Point(203, 289);
             this.txt_TCKN.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TCKN.Multiline = true;
             this.txt_TCKN.Name = "txt_TCKN";
-            this.txt_TCKN.Size = new System.Drawing.Size(259, 31);
+            this.txt_TCKN.Size = new System.Drawing.Size(307, 31);
             this.txt_TCKN.TabIndex = 16;
             this.txt_TCKN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TCKN_KeyPress);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(212, 169);
+            this.panel3.Location = new System.Drawing.Point(204, 191);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(258, 1);
+            this.panel3.Size = new System.Drawing.Size(306, 1);
             this.panel3.TabIndex = 14;
             // 
             // label12
@@ -150,7 +152,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label12.Location = new System.Drawing.Point(22, 94);
+            this.label12.Location = new System.Drawing.Point(58, 99);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 31);
@@ -162,7 +164,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label13.Location = new System.Drawing.Point(14, 139);
+            this.label13.Location = new System.Drawing.Point(42, 166);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 31);
@@ -172,10 +174,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(212, 218);
+            this.panel4.Location = new System.Drawing.Point(204, 251);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(258, 1);
+            this.panel4.Size = new System.Drawing.Size(306, 1);
             this.panel4.TabIndex = 14;
             // 
             // label14
@@ -183,7 +185,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label14.Location = new System.Drawing.Point(14, 189);
+            this.label14.Location = new System.Drawing.Point(42, 227);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(101, 31);
@@ -196,7 +198,7 @@
             this.panel1.Location = new System.Drawing.Point(212, 120);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 1);
+            this.panel1.Size = new System.Drawing.Size(306, 1);
             this.panel1.TabIndex = 14;
             // 
             // txt_HastaAdi
@@ -209,7 +211,7 @@
             this.txt_HastaAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HastaAdi.Multiline = true;
             this.txt_HastaAdi.Name = "txt_HastaAdi";
-            this.txt_HastaAdi.Size = new System.Drawing.Size(259, 31);
+            this.txt_HastaAdi.Size = new System.Drawing.Size(307, 31);
             this.txt_HastaAdi.TabIndex = 1;
             // 
             // txt_HastaSoyadi
@@ -218,11 +220,11 @@
             this.txt_HastaSoyadi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_HastaSoyadi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_HastaSoyadi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_HastaSoyadi.Location = new System.Drawing.Point(211, 143);
+            this.txt_HastaSoyadi.Location = new System.Drawing.Point(203, 165);
             this.txt_HastaSoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HastaSoyadi.Multiline = true;
             this.txt_HastaSoyadi.Name = "txt_HastaSoyadi";
-            this.txt_HastaSoyadi.Size = new System.Drawing.Size(259, 31);
+            this.txt_HastaSoyadi.Size = new System.Drawing.Size(307, 31);
             this.txt_HastaSoyadi.TabIndex = 2;
             // 
             // txt_Telefon
@@ -231,11 +233,11 @@
             this.txt_Telefon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Telefon.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_Telefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_Telefon.Location = new System.Drawing.Point(216, 188);
+            this.txt_Telefon.Location = new System.Drawing.Point(208, 221);
             this.txt_Telefon.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Telefon.Multiline = true;
             this.txt_Telefon.Name = "txt_Telefon";
-            this.txt_Telefon.Size = new System.Drawing.Size(259, 31);
+            this.txt_Telefon.Size = new System.Drawing.Size(307, 31);
             this.txt_Telefon.TabIndex = 3;
             this.txt_Telefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Telefon_KeyPress);
             // 
@@ -270,10 +272,10 @@
             this.btn_List.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_List.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_List.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_List.Location = new System.Drawing.Point(60, 468);
+            this.btn_List.Location = new System.Drawing.Point(663, 58);
             this.btn_List.Margin = new System.Windows.Forms.Padding(4);
             this.btn_List.Name = "btn_List";
-            this.btn_List.Size = new System.Drawing.Size(278, 74);
+            this.btn_List.Size = new System.Drawing.Size(278, 95);
             this.btn_List.TabIndex = 110;
             this.btn_List.Text = "RANDEVULARI LİSTELE";
             this.btn_List.UseVisualStyleBackColor = true;
@@ -288,10 +290,10 @@
             this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Update.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Update.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Update.Location = new System.Drawing.Point(400, 468);
+            this.btn_Update.Location = new System.Drawing.Point(1008, 58);
             this.btn_Update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(283, 74);
+            this.btn_Update.Size = new System.Drawing.Size(283, 95);
             this.btn_Update.TabIndex = 115;
             this.btn_Update.Text = "RANDEVU GÜNCELLE";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -306,10 +308,10 @@
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Delete.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Delete.Location = new System.Drawing.Point(736, 468);
+            this.btn_Delete.Location = new System.Drawing.Point(663, 172);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(287, 72);
+            this.btn_Delete.Size = new System.Drawing.Size(278, 72);
             this.btn_Delete.TabIndex = 116;
             this.btn_Delete.Text = "RANDEVU SİL";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -318,23 +320,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 548);
+            this.dataGridView1.Location = new System.Drawing.Point(84, 730);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1119, 241);
+            this.dataGridView1.Size = new System.Drawing.Size(1207, 244);
             this.dataGridView1.TabIndex = 111;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(503, 142);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 112;
-            this.pictureBox1.TabStop = false;
             // 
             // comboBox_Dakika
             // 
@@ -379,12 +370,13 @@
             this.groupBox2.Controls.Add(this.comboBox_Saat);
             this.groupBox2.Controls.Add(this.comboBox_Bolum);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.Location = new System.Drawing.Point(520, 13);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupBox2.Location = new System.Drawing.Point(663, 265);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(628, 433);
+            this.groupBox2.Size = new System.Drawing.Size(628, 442);
             this.groupBox2.TabIndex = 93;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hastane Bilgileri";
@@ -422,7 +414,7 @@
             this.txtMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtMainMenu.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.txtMainMenu.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtMainMenu.Location = new System.Drawing.Point(1031, 513);
+            this.txtMainMenu.Location = new System.Drawing.Point(78, 265);
             this.txtMainMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtMainMenu.Name = "txtMainMenu";
             this.txtMainMenu.Size = new System.Drawing.Size(117, 27);
@@ -430,12 +422,35 @@
             this.txtMainMenu.Text = "Ana Menü";
             this.txtMainMenu.Click += new System.EventHandler(this.txtMainMenu_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__14_;
+            this.pictureBox1.Location = new System.Drawing.Point(84, 58);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(548, 203);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 112;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__10_;
+            this.pictureBox3.Location = new System.Drawing.Point(1309, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 56);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 118;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // RandevuUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1161, 802);
+            this.ClientSize = new System.Drawing.Size(1373, 1008);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtMainMenu);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
@@ -444,6 +459,7 @@
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RandevuUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -452,9 +468,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,5 +507,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_TCKN;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

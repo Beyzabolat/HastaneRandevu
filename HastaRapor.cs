@@ -1,4 +1,5 @@
 ﻿using EntityLayer;
+using iTextSharp.text;
 using iTextSharp.text.pdf;
 using LogicLayer;
 using System;
@@ -76,14 +77,21 @@ namespace HastaneRandevu
                 {
                     var mailAddress = new MailAddress(txt_Mail.Text); // E-posta adresini kontrol et
                     MailMessage mesaj = new MailMessage();
-                    mesaj.From = new MailAddress("beybolat62@gmail.com");
+                    mesaj.From = new MailAddress("saglikliyasamhastanesi@gmail.com");
                     mesaj.To.Add(mailAddress.Address); // Geçerli ise, e-posta adresini kullan
                     mesaj.Subject = "# Sağlıklı Yaşam Hastanesi Doktor Raporu #";
-                    mesaj.Body = txt_Rapor.Text;
+
+                    // E-posta içeriği
+                    StringBuilder body = new StringBuilder();
+                    body.AppendLine($"Doktor Adı: {doktorad} {doktorsoyad}");
+                    body.AppendLine($"Hasta ID: {textBox1.Text}");
+                    body.AppendLine("Görüşme Raporu:");
+                    body.AppendLine(txt_Rapor.Text);
+                    mesaj.Body = body.ToString();
 
                     // SmtpClient yapılandırması
                     SmtpClient a = new SmtpClient();
-                    a.Credentials = new System.Net.NetworkCredential("beybolat62@gmail.com", "035805BeyzA.");
+                    a.Credentials = new System.Net.NetworkCredential("saglikliyasamhastanesi@gmail.com", "jjmt nkds bkcc qkkn");
                     a.Port = 587;
                     a.Host = "smtp.gmail.com";
                     a.EnableSsl = true;
@@ -107,10 +115,6 @@ namespace HastaneRandevu
             }
         }
 
-
-
-
-
         private void txtMainMenu_Click(object sender, EventArgs e)
         {
             DocAnaSayfa dok = new DocAnaSayfa();
@@ -123,7 +127,6 @@ namespace HastaneRandevu
         private void HastaRapor_Load(object sender, EventArgs e)
         {
             dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
-
         }
 
         private void btn_Pdf_Click(object sender, EventArgs e)
@@ -131,17 +134,19 @@ namespace HastaneRandevu
             // PDF oluşturma işlemleri
             try
             {
-                // PDF dosyasının adı ve konumu
-                string pdfFilePath = "C:\\Users\\admin\\Desktop\\FileName.pdf";
+                string pdfFilePath = "C:\\Users\\admin\\Desktop\\HastaRaporu.pdf";
 
                 // PDF belgesi oluştur
-                iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document();
+                Document pdfDoc = new Document();
                 PdfWriter.GetInstance(pdfDoc, new FileStream(pdfFilePath, FileMode.Create));
 
                 pdfDoc.Open();
 
-                // PDF'e eklemek istediğiniz metni ekleyin
-                pdfDoc.Add(new iTextSharp.text.Paragraph("PDF Oluşturma Örnegi"));
+                // Doktor ve hasta bilgilerini ekle
+                pdfDoc.Add(new Paragraph($"Doktor Adı: {doktorad} {doktorsoyad}"));
+                pdfDoc.Add(new Paragraph($"Hasta ID: {textBox1.Text}"));
+                pdfDoc.Add(new Paragraph("Görüşme Raporu:"));
+                pdfDoc.Add(new Paragraph(txt_Rapor.Text));
 
                 pdfDoc.Close();
 
@@ -153,5 +158,13 @@ namespace HastaneRandevu
             }
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

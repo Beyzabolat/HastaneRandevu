@@ -35,6 +35,8 @@
             this.btn_HstIslem = new System.Windows.Forms.Button();
             this.btn_Grafik1 = new System.Windows.Forms.Button();
             this.txt_MainMenu = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -127,6 +129,17 @@
             this.txt_MainMenu.Text = "Ana Sayfa";
             this.txt_MainMenu.Click += new System.EventHandler(this.txt_MainMenu_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__10_;
+            this.pictureBox3.Location = new System.Drawing.Point(1231, 1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 56);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // DocAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,19 +147,22 @@
             this.BackgroundImage = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1295, 674);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txt_MainMenu);
             this.Controls.Add(this.btn_Grafik1);
             this.Controls.Add(this.btn_HstIslem);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DocAnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Doktor Ana Sayfası";
             this.Load += new System.EventHandler(this.DocAnaSayfa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +176,6 @@
         private System.Windows.Forms.Button btn_HstIslem;
         private System.Windows.Forms.Button btn_Grafik1;
         private System.Windows.Forms.Label txt_MainMenu;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

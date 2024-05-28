@@ -41,7 +41,9 @@
             this.btn_Mail = new System.Windows.Forms.Button();
             this.btn_Pdf = new System.Windows.Forms.Button();
             this.txt_Mail = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMainMenu
@@ -51,7 +53,7 @@
             this.txtMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtMainMenu.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.txtMainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.txtMainMenu.Location = new System.Drawing.Point(51, 462);
+            this.txtMainMenu.Location = new System.Drawing.Point(63, 419);
             this.txtMainMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtMainMenu.Name = "txtMainMenu";
             this.txtMainMenu.Size = new System.Drawing.Size(107, 29);
@@ -64,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(455, 389);
+            this.label1.Location = new System.Drawing.Point(61, 476);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 24);
@@ -74,7 +76,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(462, 448);
+            this.panel1.Location = new System.Drawing.Point(68, 535);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 1);
@@ -98,7 +100,7 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(210)))), ((int)(((byte)(216)))));
-            this.dataGridView1.Location = new System.Drawing.Point(513, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(479, 362);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -110,7 +112,7 @@
             this.btn_Kaydet.BackColor = System.Drawing.Color.Transparent;
             this.btn_Kaydet.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Kaydet.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Kaydet.Location = new System.Drawing.Point(45, 73);
+            this.btn_Kaydet.Location = new System.Drawing.Point(56, 252);
             this.btn_Kaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Kaydet.Name = "btn_Kaydet";
             this.btn_Kaydet.Size = new System.Drawing.Size(265, 72);
@@ -124,7 +126,7 @@
             this.btn_Sil.BackColor = System.Drawing.Color.Transparent;
             this.btn_Sil.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Sil.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Sil.Location = new System.Drawing.Point(45, 153);
+            this.btn_Sil.Location = new System.Drawing.Point(56, 332);
             this.btn_Sil.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sil.Name = "btn_Sil";
             this.btn_Sil.Size = new System.Drawing.Size(265, 62);
@@ -136,7 +138,7 @@
             // txt_Rapor
             // 
             this.txt_Rapor.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.txt_Rapor.Location = new System.Drawing.Point(45, 227);
+            this.txt_Rapor.Location = new System.Drawing.Point(56, 30);
             this.txt_Rapor.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_Rapor.Multiline = true;
             this.txt_Rapor.Name = "txt_Rapor";
@@ -148,7 +150,7 @@
             this.btn_List.BackColor = System.Drawing.Color.Transparent;
             this.btn_List.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_List.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btn_List.Location = new System.Drawing.Point(1095, 354);
+            this.btn_List.Location = new System.Drawing.Point(1061, 299);
             this.btn_List.Margin = new System.Windows.Forms.Padding(4);
             this.btn_List.Name = "btn_List";
             this.btn_List.Size = new System.Drawing.Size(137, 43);
@@ -162,7 +164,7 @@
             this.btn_Mail.BackColor = System.Drawing.Color.Transparent;
             this.btn_Mail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Mail.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Mail.Location = new System.Drawing.Point(513, 472);
+            this.btn_Mail.Location = new System.Drawing.Point(65, 544);
             this.btn_Mail.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Mail.Name = "btn_Mail";
             this.btn_Mail.Size = new System.Drawing.Size(248, 69);
@@ -176,7 +178,7 @@
             this.btn_Pdf.BackColor = System.Drawing.Color.Transparent;
             this.btn_Pdf.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Pdf.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Pdf.Location = new System.Drawing.Point(513, 549);
+            this.btn_Pdf.Location = new System.Drawing.Point(65, 621);
             this.btn_Pdf.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Pdf.Name = "btn_Pdf";
             this.btn_Pdf.Size = new System.Drawing.Size(248, 69);
@@ -188,11 +190,22 @@
             // txt_Mail
             // 
             this.txt_Mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_Mail.Location = new System.Drawing.Point(459, 417);
+            this.txt_Mail.Location = new System.Drawing.Point(65, 504);
             this.txt_Mail.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Mail.Name = "txt_Mail";
             this.txt_Mail.Size = new System.Drawing.Size(330, 32);
             this.txt_Mail.TabIndex = 60;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__10_;
+            this.pictureBox3.Location = new System.Drawing.Point(1167, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 56);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 61;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // HastaRapor
             // 
@@ -200,7 +213,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1248, 662);
+            this.ClientSize = new System.Drawing.Size(1234, 712);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txt_Mail);
             this.Controls.Add(this.btn_Pdf);
             this.Controls.Add(this.btn_Mail);
@@ -214,11 +228,13 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HastaRapor";
             this.Text = "HastaRapor";
             this.Load += new System.EventHandler(this.HastaRapor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +254,6 @@
         private System.Windows.Forms.Button btn_Mail;
         private System.Windows.Forms.Button btn_Pdf;
         private System.Windows.Forms.TextBox txt_Mail;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

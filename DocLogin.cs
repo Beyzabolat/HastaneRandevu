@@ -110,20 +110,12 @@ namespace HastaneRandevu
 
         private void btn_ShowPw_Click(object sender, EventArgs e)
         {
-            if (txtPw.PasswordChar == '*')
-            {
-                btn_HidePw.BringToFront();
-                txtPw.PasswordChar = '\0';
-            }
+           
         }
 
         private void btn_HidePw_Click(object sender, EventArgs e)
         {
-            if (txtPw.PasswordChar == '\0')
-            {
-                btn_ShowPw.BringToFront();
-                txtPw.PasswordChar = '*';
-            }
+           
         }
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
@@ -132,6 +124,15 @@ namespace HastaneRandevu
         private void txtPw_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -41,22 +41,38 @@ namespace DataAccessLayer
 
         public static int HstEkle(EntityHst p)
         {
-            OleDbCommand komut2 = new OleDbCommand("INSERT INTO HastaBilgi(HastaAD,HastaSOYAD,HastaTCKN,HastaTELEFON,HastaBÖLÜM,DoktorADI,Tarih,Saat,Rapor) VALUES (@P1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@P9)", Baglanti.bgl);
-            if (komut2.Connection.State != ConnectionState.Open)
+            using (OleDbCommand komut2 = new OleDbCommand("INSERT INTO HastaBilgi(HastaAD, HastaSOYAD, HastaTCKN, HastaTELEFON, HastaBÖLÜM, DoktorADI, Tarih, Saat, Rapor) VALUES (@P1, @P2, @P3, @P4, @P5, @P6, @P7, @P8, @P9)", Baglanti.bgl))
             {
-                komut2.Connection.Open();
+                if (komut2.Connection.State != ConnectionState.Open)
+                {
+                    komut2.Connection.Open();
+                }
+
+                komut2.Parameters.AddWithValue("@P1", p.Hstname);
+                komut2.Parameters.AddWithValue("@P2", p.Hstsurname);
+                komut2.Parameters.AddWithValue("@P3", p.Hsttckn);
+                komut2.Parameters.AddWithValue("@P4", p.Hstphone);
+                komut2.Parameters.AddWithValue("@P5", p.Hstbolum);
+                komut2.Parameters.AddWithValue("@P6", p.Docname);
+
+                // Tarih parametresi için özel tür kontrolü
+                if (p.Tarih is DateTime tarihValue)
+                {
+                    komut2.Parameters.AddWithValue("@P7", tarihValue);
+                }
+                else
+                {
+                    throw new ArgumentException("Tarih bir DateTime nesnesi olmalıdır");
+                }
+
+                komut2.Parameters.AddWithValue("@P8", p.Saat);
+                komut2.Parameters.AddWithValue("@P9", p.Rapor);
+
+                return komut2.ExecuteNonQuery();
             }
-            komut2.Parameters.AddWithValue("@P1", p.Hstname);
-            komut2.Parameters.AddWithValue("@P2", p.Hstsurname);
-            komut2.Parameters.AddWithValue("@P3", p.Hsttckn);
-            komut2.Parameters.AddWithValue("@P4", p.Hstphone);
-            komut2.Parameters.AddWithValue("@P5", p.Hstbolum);
-            komut2.Parameters.AddWithValue("@P6", p.Docname);
-            komut2.Parameters.AddWithValue("@P7", p.Tarih);
-            komut2.Parameters.AddWithValue("@P8", p.Saat);
-            komut2.Parameters.AddWithValue("@P9", p.Rapor);
-            return komut2.ExecuteNonQuery();
         }
+
+
 
         public static bool HstSil(int p)
         {

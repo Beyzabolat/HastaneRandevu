@@ -46,14 +46,35 @@ namespace HastaneRandevu
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[index];
-            textBox1.Text = selectedRow.Cells[0].Value.ToString();                      //Bu kod bloğu, dataGridView üzerinde
-            txt_HastaAdi.Text = selectedRow.Cells[1].Value.ToString();                  //tıklanan hastanın tüm bilgilerini
-            txt_HastaSoyadi.Text = selectedRow.Cells[2].Value.ToString();               //gerekli textBox, comboBox ve
-            txt_TCKN.Text = selectedRow.Cells[3].Value.ToString();                      //dateTimePicker üzerine çekilmesini sağlar
+            textBox1.Text = selectedRow.Cells[0].Value.ToString();
+            txt_HastaAdi.Text = selectedRow.Cells[1].Value.ToString();
+            txt_HastaSoyadi.Text = selectedRow.Cells[2].Value.ToString();
+            txt_TCKN.Text = selectedRow.Cells[3].Value.ToString();
             txt_Telefon.Text = selectedRow.Cells[4].Value.ToString();
             comboBox_Bolum.Text = selectedRow.Cells[5].Value.ToString();
             comboBox_Doktoradi.Text = selectedRow.Cells[6].Value.ToString();
-            dateTimePicker1.Value = Convert.ToDateTime(selectedRow.Cells[7].Value);
+
+            DateTime tarihValue;
+            if (DateTime.TryParse(selectedRow.Cells[7].Value.ToString(), out tarihValue))
+            {
+                if (tarihValue < dateTimePicker1.MinDate)
+                {
+                    dateTimePicker1.Value = dateTimePicker1.MinDate;
+                }
+                else if (tarihValue > dateTimePicker1.MaxDate)
+                {
+                    dateTimePicker1.Value = dateTimePicker1.MaxDate;
+                }
+                else
+                {
+                    dateTimePicker1.Value = tarihValue;
+                }
+            }
+            else
+            {
+                dateTimePicker1.Value = dateTimePicker1.MinDate; // Geçersiz tarih formatında ise
+            }
+
             saat = selectedRow.Cells[8].Value.ToString();
             saat = saat.Substring(0, 2);
             comboBox_Saat.Text = saat;
@@ -61,6 +82,7 @@ namespace HastaneRandevu
             dakika = dakika.Substring(3);
             comboBox_Dakika.Text = dakika;
         }
+
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
@@ -162,37 +184,47 @@ namespace HastaneRandevu
         {
             dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
 
-            // Saatleri ComboBox'a ekleyelim
+            // Saat ve Dakika ComboBox'larını dolduralım
             for (int i = 0; i <= 23; i++)
             {
-                comboBox_Saat.Items.Add(i.ToString("00")); // Saatleri iki haneli olarak ekleyelim (örneğin: "01", "02", ..., "23")
+                comboBox_Saat.Items.Add(i.ToString("00"));
             }
-
-            // Dakikaları ComboBox'a ekleyelim
             for (int i = 0; i <= 59; i++)
             {
-                comboBox_Dakika.Items.Add(i.ToString("00")); // Dakikaları iki haneli olarak ekleyelim (örneğin: "00", "01", ..., "59")
+                comboBox_Dakika.Items.Add(i.ToString("00"));
             }
-
-            // İsteğe bağlı olarak, başlangıçta varsayılan saat ve dakikayı seçebilirsiniz
             comboBox_Saat.SelectedIndex = 0;
             comboBox_Dakika.SelectedIndex = 0;
-            // Örnek bir bölüm listesi oluşturalım
-            List<string> bolumListesi = new List<string>();
-            bolumListesi.Add("Kardiyoloji");
-            bolumListesi.Add("Ortopedi");
-            bolumListesi.Add("Dahiliye");
-            // ComboBox'ın veri kaynağını bu listeye bağlayalım
-            comboBox_Bolum.DataSource = bolumListesi;
-            // DataGridView'deki CellClick veya CellContentClick olaylarına listeleme metodunu atayalım
 
-            dateTimePicker1.MinDate = DateTime.Now;
-            OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);              //bu kod parçası, seçilen bölüme göre
-            while (dr.Read())                                                       //doktorların doktoradi comboBox'unda listelenmesini
-            {                                                                       //sağlar.
+            // Bölüm ComboBox'ını dolduralım
+            List<string> bolumListesi = new List<string>
+    {
+        "Kardiyoloji", "Ortopedi", "Dahiliye", "Genel Cerrahi", "Psikiyatri",
+        "Kulak-Burun-Boğaz", "Kadın Hastalıkları", "Kadın Doğum", "Üroloji",
+        "Çocuk Hastalıkları", "Aile Hekimi"
+    };
+            comboBox_Bolum.DataSource = bolumListesi;
+
+            // MinDate ve MaxDate ayarlarını yapalım
+            dateTimePicker1.MinDate = new DateTime(2000, 1, 1);
+            dateTimePicker1.MaxDate = DateTime.Now.AddYears(10);  // Örnek: Şu andan itibaren 10 yıl sonrası
+
+            // Doktorları dolduralım
+            OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);
+            while (dr.Read())
+            {
                 comboBox_Doktoradi.Items.Add(dr["DocAD"] + " " + dr["DocSOYAD"]);
             }
             dr.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

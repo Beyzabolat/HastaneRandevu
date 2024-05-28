@@ -38,6 +38,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox_Dakika = new System.Windows.Forms.ComboBox();
+            this.comboBox_Saat = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox_Doktoradi = new System.Windows.Forms.ComboBox();
             this.comboBox_Bolum = new System.Windows.Forms.ComboBox();
@@ -51,21 +53,21 @@
             this.txt_Telefon = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_DocLogin = new System.Windows.Forms.Button();
-            this.comboBox_Dakika = new System.Windows.Forms.ComboBox();
-            this.comboBox_Saat = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMainMenu
             // 
             this.txtMainMenu.AutoSize = true;
-            this.txtMainMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.txtMainMenu.BackColor = System.Drawing.Color.LightCyan;
             this.txtMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtMainMenu.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.txtMainMenu.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtMainMenu.Location = new System.Drawing.Point(27, 517);
+            this.txtMainMenu.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtMainMenu.Location = new System.Drawing.Point(1187, 642);
             this.txtMainMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtMainMenu.Name = "txtMainMenu";
             this.txtMainMenu.Size = new System.Drawing.Size(107, 29);
@@ -78,7 +80,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(23, 92);
+            this.label6.Location = new System.Drawing.Point(23, 115);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 29);
@@ -102,7 +104,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label7.Location = new System.Drawing.Point(23, 141);
+            this.label7.Location = new System.Drawing.Point(25, 204);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 29);
@@ -124,7 +126,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(201, 163);
+            this.panel3.Location = new System.Drawing.Point(203, 226);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 1);
@@ -133,7 +135,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(201, 212);
+            this.panel2.Location = new System.Drawing.Point(201, 310);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 1);
@@ -142,7 +144,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(201, 262);
+            this.panel4.Location = new System.Drawing.Point(202, 402);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 1);
@@ -159,7 +161,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox2.Location = new System.Drawing.Point(475, 15);
+            this.groupBox2.Location = new System.Drawing.Point(57, 165);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -168,9 +170,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hastane Bilgileri";
             // 
+            // comboBox_Dakika
+            // 
+            this.comboBox_Dakika.BackColor = System.Drawing.Color.LightCyan;
+            this.comboBox_Dakika.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox_Dakika.FormattingEnabled = true;
+            this.comboBox_Dakika.ItemHeight = 23;
+            this.comboBox_Dakika.Location = new System.Drawing.Point(307, 381);
+            this.comboBox_Dakika.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Dakika.Name = "comboBox_Dakika";
+            this.comboBox_Dakika.Size = new System.Drawing.Size(249, 31);
+            this.comboBox_Dakika.TabIndex = 9;
+            // 
+            // comboBox_Saat
+            // 
+            this.comboBox_Saat.BackColor = System.Drawing.Color.LightCyan;
+            this.comboBox_Saat.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox_Saat.FormattingEnabled = true;
+            this.comboBox_Saat.ItemHeight = 23;
+            this.comboBox_Saat.Location = new System.Drawing.Point(51, 381);
+            this.comboBox_Saat.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Saat.Name = "comboBox_Saat";
+            this.comboBox_Saat.Size = new System.Drawing.Size(248, 31);
+            this.comboBox_Saat.TabIndex = 8;
+            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.LightCyan;
             this.dateTimePicker1.Font = new System.Drawing.Font("Corbel", 12F);
             this.dateTimePicker1.Location = new System.Drawing.Point(53, 302);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
@@ -181,7 +207,7 @@
             // 
             // comboBox_Doktoradi
             // 
-            this.comboBox_Doktoradi.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.comboBox_Doktoradi.BackColor = System.Drawing.Color.LightCyan;
             this.comboBox_Doktoradi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboBox_Doktoradi.FormattingEnabled = true;
             this.comboBox_Doktoradi.ItemHeight = 23;
@@ -193,7 +219,7 @@
             // 
             // comboBox_Bolum
             // 
-            this.comboBox_Bolum.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.comboBox_Bolum.BackColor = System.Drawing.Color.LightCyan;
             this.comboBox_Bolum.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboBox_Bolum.FormattingEnabled = true;
             this.comboBox_Bolum.ItemHeight = 23;
@@ -220,22 +246,22 @@
             this.groupBox1.Controls.Add(this.txt_Telefon);
             this.groupBox1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(13, 164);
+            this.groupBox1.Location = new System.Drawing.Point(840, 165);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(454, 308);
+            this.groupBox1.Size = new System.Drawing.Size(454, 457);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hasta Bilgileri";
             // 
             // txt_TCKN
             // 
-            this.txt_TCKN.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.txt_TCKN.BackColor = System.Drawing.Color.LightCyan;
             this.txt_TCKN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_TCKN.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_TCKN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_TCKN.Location = new System.Drawing.Point(200, 187);
+            this.txt_TCKN.Location = new System.Drawing.Point(200, 285);
             this.txt_TCKN.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TCKN.Multiline = true;
             this.txt_TCKN.Name = "txt_TCKN";
@@ -248,7 +274,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(23, 239);
+            this.label8.Location = new System.Drawing.Point(24, 379);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 29);
@@ -258,7 +284,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(201, 114);
+            this.panel1.Location = new System.Drawing.Point(201, 137);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(229, 1);
@@ -266,11 +292,11 @@
             // 
             // txt_HastaAdi
             // 
-            this.txt_HastaAdi.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.txt_HastaAdi.BackColor = System.Drawing.Color.LightCyan;
             this.txt_HastaAdi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_HastaAdi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_HastaAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_HastaAdi.Location = new System.Drawing.Point(200, 88);
+            this.txt_HastaAdi.Location = new System.Drawing.Point(200, 111);
             this.txt_HastaAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HastaAdi.Multiline = true;
             this.txt_HastaAdi.Name = "txt_HastaAdi";
@@ -279,11 +305,11 @@
             // 
             // txt_HastaSoyadi
             // 
-            this.txt_HastaSoyadi.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.txt_HastaSoyadi.BackColor = System.Drawing.Color.LightCyan;
             this.txt_HastaSoyadi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_HastaSoyadi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_HastaSoyadi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_HastaSoyadi.Location = new System.Drawing.Point(200, 137);
+            this.txt_HastaSoyadi.Location = new System.Drawing.Point(202, 200);
             this.txt_HastaSoyadi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HastaSoyadi.Multiline = true;
             this.txt_HastaSoyadi.Name = "txt_HastaSoyadi";
@@ -295,7 +321,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(23, 190);
+            this.label1.Location = new System.Drawing.Point(23, 288);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 29);
@@ -304,11 +330,11 @@
             // 
             // txt_Telefon
             // 
-            this.txt_Telefon.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.txt_Telefon.BackColor = System.Drawing.Color.LightCyan;
             this.txt_Telefon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Telefon.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_Telefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txt_Telefon.Location = new System.Drawing.Point(200, 236);
+            this.txt_Telefon.Location = new System.Drawing.Point(201, 376);
             this.txt_Telefon.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Telefon.Multiline = true;
             this.txt_Telefon.Name = "txt_Telefon";
@@ -319,21 +345,22 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(357, 142);
+            this.pictureBox1.Size = new System.Drawing.Size(602, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_DocLogin
             // 
             this.btn_DocLogin.BackColor = System.Drawing.Color.Transparent;
             this.btn_DocLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DocLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_DocLogin.ForeColor = System.Drawing.Color.Teal;
-            this.btn_DocLogin.Location = new System.Drawing.Point(816, 497);
+            this.btn_DocLogin.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btn_DocLogin.Location = new System.Drawing.Point(1040, 72);
             this.btn_DocLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DocLogin.Name = "btn_DocLogin";
             this.btn_DocLogin.Size = new System.Drawing.Size(251, 85);
@@ -342,42 +369,30 @@
             this.btn_DocLogin.UseVisualStyleBackColor = false;
             this.btn_DocLogin.Click += new System.EventHandler(this.btn_DocLogin_Click);
             // 
-            // comboBox_Dakika
+            // pictureBox3
             // 
-            this.comboBox_Dakika.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.comboBox_Dakika.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBox_Dakika.FormattingEnabled = true;
-            this.comboBox_Dakika.ItemHeight = 23;
-            this.comboBox_Dakika.Location = new System.Drawing.Point(307, 381);
-            this.comboBox_Dakika.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_Dakika.Name = "comboBox_Dakika";
-            this.comboBox_Dakika.Size = new System.Drawing.Size(249, 31);
-            this.comboBox_Dakika.TabIndex = 9;
-            // 
-            // comboBox_Saat
-            // 
-            this.comboBox_Saat.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.comboBox_Saat.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBox_Saat.FormattingEnabled = true;
-            this.comboBox_Saat.ItemHeight = 23;
-            this.comboBox_Saat.Location = new System.Drawing.Point(51, 381);
-            this.comboBox_Saat.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_Saat.Name = "comboBox_Saat";
-            this.comboBox_Saat.Size = new System.Drawing.Size(248, 31);
-            this.comboBox_Saat.TabIndex = 8;
+            this.pictureBox3.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__10_;
+            this.pictureBox3.Location = new System.Drawing.Point(1315, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 56);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 41;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // RandevuAlma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1105, 612);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(1392, 727);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btn_DocLogin);
             this.Controls.Add(this.txtMainMenu);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RandevuAlma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -388,6 +403,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,5 +435,6 @@
         private System.Windows.Forms.Button btn_DocLogin;
         private System.Windows.Forms.ComboBox comboBox_Dakika;
         private System.Windows.Forms.ComboBox comboBox_Saat;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

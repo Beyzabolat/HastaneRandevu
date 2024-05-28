@@ -26,6 +26,15 @@ namespace HastaneRandevu
             bolumListesi.Add("Kardiyoloji");
             bolumListesi.Add("Ortopedi");
             bolumListesi.Add("Dahiliye");
+            bolumListesi.Add("Genel Cerrahi");
+            bolumListesi.Add("Psikiyatri");
+            bolumListesi.Add("Kulak-Burun-Boğaz");
+            bolumListesi.Add("Kadın Hastalıkları");
+            bolumListesi.Add("Kadın Doğum");
+            bolumListesi.Add("Üroloji");
+            bolumListesi.Add("Dahiliye");
+            bolumListesi.Add("Çocuk Hastalıkları");
+            bolumListesi.Add("Aile Hekimi");
             comboBox_Bolum.DataSource = bolumListesi;
             dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
         }
@@ -138,6 +147,15 @@ namespace HastaneRandevu
             SecAnaSayfa secAnaSayfa = new SecAnaSayfa();
             secAnaSayfa.Show();
             this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

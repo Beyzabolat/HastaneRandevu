@@ -117,5 +117,14 @@ namespace HastaneRandevu
         {
             dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

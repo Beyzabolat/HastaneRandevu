@@ -129,5 +129,25 @@ namespace HastaneRandevu
             }
         }
 
+        private void exitTxt_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Opening loginScreen = new Opening();
+            loginScreen.Show();
+            this.Hide();
+        }
     }
 }

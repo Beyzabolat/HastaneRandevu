@@ -49,5 +49,14 @@ namespace HastaneRandevu
             label2.Text = doktorad + " " + doktorsoyad;     //Hoş geldiniz Mehmet Yiğit Karaoğlan metninin yazılmasını sağlar
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

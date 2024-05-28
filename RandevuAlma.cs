@@ -69,6 +69,15 @@ namespace HastaneRandevu
             bolumListesi.Add("Kardiyoloji");
             bolumListesi.Add("Ortopedi");
             bolumListesi.Add("Dahiliye");
+            bolumListesi.Add("Genel Cerrahi");
+            bolumListesi.Add("Psikiyatri");
+            bolumListesi.Add("Kulak-Burun-Boğaz");
+            bolumListesi.Add("Kadın Hastalıkları");
+            bolumListesi.Add("Kadın Doğum");
+            bolumListesi.Add("Üroloji");
+            bolumListesi.Add("Dahiliye");
+            bolumListesi.Add("Çocuk Hastalıkları");
+            bolumListesi.Add("Aile Hekimi");
             // ComboBox'ın veri kaynağını bu listeye bağlayalım
             comboBox_Bolum.DataSource = bolumListesi;
             // DataGridView'deki CellClick veya CellContentClick olaylarına listeleme metodunu atayalım
@@ -158,5 +167,18 @@ namespace HastaneRandevu
             dr.Close();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

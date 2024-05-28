@@ -51,5 +51,14 @@ namespace HastaneRandevu
             sekreter.Show();
             this.Close();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
