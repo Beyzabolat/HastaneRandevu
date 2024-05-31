@@ -132,7 +132,7 @@
             this.btn_Kaydet.BackColor = System.Drawing.Color.Transparent;
             this.btn_Kaydet.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Kaydet.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Kaydet.Location = new System.Drawing.Point(443, 768);
+            this.btn_Kaydet.Location = new System.Drawing.Point(443, 799);
             this.btn_Kaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Kaydet.Name = "btn_Kaydet";
             this.btn_Kaydet.Size = new System.Drawing.Size(198, 55);
@@ -182,12 +182,12 @@
             // btn_Mail
             // 
             this.btn_Mail.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Mail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_Mail.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Mail.ForeColor = System.Drawing.SystemColors.GrayText;
             this.btn_Mail.Location = new System.Drawing.Point(443, 726);
             this.btn_Mail.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Mail.Name = "btn_Mail";
-            this.btn_Mail.Size = new System.Drawing.Size(376, 34);
+            this.btn_Mail.Size = new System.Drawing.Size(427, 65);
             this.btn_Mail.TabIndex = 19;
             this.btn_Mail.Text = "RAPORU HASTAYA MAİL GÖNDER";
             this.btn_Mail.UseVisualStyleBackColor = false;
@@ -198,7 +198,7 @@
             this.btn_Pdf.BackColor = System.Drawing.Color.Transparent;
             this.btn_Pdf.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Pdf.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btn_Pdf.Location = new System.Drawing.Point(645, 768);
+            this.btn_Pdf.Location = new System.Drawing.Point(670, 800);
             this.btn_Pdf.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Pdf.Name = "btn_Pdf";
             this.btn_Pdf.Size = new System.Drawing.Size(200, 53);
@@ -420,7 +420,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::HastaneRandevu.Properties.Resources.icon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1283, 893);
             this.Controls.Add(this.label9);

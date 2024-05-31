@@ -182,7 +182,6 @@ namespace HastaneRandevu
         {
             dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
 
-            
             for (int i = 0; i <= 23; i++)
             {
                 comboBox_Saat.Items.Add(i.ToString("00"));
@@ -194,7 +193,10 @@ namespace HastaneRandevu
             comboBox_Saat.SelectedIndex = 0;
             comboBox_Dakika.SelectedIndex = 0;
 
-           
+            // MinDate ve MaxDate ayarlarını yapalım
+            dateTimePicker1.MinDate = DateTime.Today; // Bugünkü tarihi minimum tarih olarak ayarla
+            dateTimePicker1.MaxDate = DateTime.Now.AddYears(10); // Örnek: Şu andan itibaren 10 yıl sonrası
+
             List<string> bolumListesi = new List<string>
     {
         "Kardiyoloji", "Ortopedi", "Dahiliye", "Genel Cerrahi", "Psikiyatri",
@@ -203,11 +205,6 @@ namespace HastaneRandevu
     };
             comboBox_Bolum.DataSource = bolumListesi;
 
-            // MinDate ve MaxDate ayarlarını yapalım
-            dateTimePicker1.MinDate = new DateTime(2000, 1, 1);
-            dateTimePicker1.MaxDate = DateTime.Now.AddYears(10);  // Örnek: Şu andan itibaren 10 yıl sonrası
-
-          
             OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);
             while (dr.Read())
             {
@@ -215,6 +212,7 @@ namespace HastaneRandevu
             }
             dr.Close();
         }
+
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {

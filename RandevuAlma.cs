@@ -61,22 +61,19 @@ namespace HastaneRandevu
         }
         private void RandevuAlma_Load(object sender, EventArgs e)
         {
-          
             for (int i = 0; i <= 23; i++)
             {
-                comboBox_Saat.Items.Add(i.ToString("00")); 
+                comboBox_Saat.Items.Add(i.ToString("00"));
             }
 
-            
             for (int i = 0; i <= 59; i++)
             {
-                comboBox_Dakika.Items.Add(i.ToString("00")); 
+                comboBox_Dakika.Items.Add(i.ToString("00"));
             }
 
-          
             comboBox_Saat.SelectedIndex = 0;
             comboBox_Dakika.SelectedIndex = 0;
-          
+
             List<string> bolumListesi = new List<string>();
             bolumListesi.Add("Kardiyoloji");
             bolumListesi.Add("Ortopedi");
@@ -90,19 +87,20 @@ namespace HastaneRandevu
             bolumListesi.Add("Dahiliye");
             bolumListesi.Add("Çocuk Hastalıkları");
             bolumListesi.Add("Aile Hekimi");
-            
-            comboBox_Bolum.DataSource = bolumListesi;
-          
 
-            dateTimePicker1.MinDate = DateTime.Now;
-            OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);             
-            while (dr.Read())                                                      
-            {                                                                      
+            comboBox_Bolum.DataSource = bolumListesi;
+
+            // MinDate ayarını yapalım
+            dateTimePicker1.MinDate = DateTime.Today; // Bugünkü tarihi minimum tarih olarak ayarla
+
+            OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);
+            while (dr.Read())
+            {
                 comboBox_Doktoradi.Items.Add(dr["DocAD"] + " " + dr["DocSOYAD"]);
             }
             dr.Close();
-
         }
+
         private void comboBox_Bolum1_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox_Doktoradi.Items.Clear();

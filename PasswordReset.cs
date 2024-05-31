@@ -87,5 +87,10 @@ namespace HastaneRandevu
             loginForm.Show();
             this.Hide();
         }
+
+        private void PasswordReset_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

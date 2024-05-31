@@ -89,6 +89,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PasswordReset";
             this.Text = "PasswordReset";
+            this.Load += new System.EventHandler(this.PasswordReset_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
