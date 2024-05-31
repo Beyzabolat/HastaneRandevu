@@ -11,6 +11,11 @@ Bu proje, doktorlar, hastalar ve sekreterler arasında randevu yönetimini kolay
 - **Veri Yönetimi:** Kullanıcı ve randevu bilgilerinin güvenli bir şekilde saklanması.
 - **Rapor Oluşturma:** Doktorların hastalar için rapor oluşturabilmesi ve bu raporların PDF olarak kaydedilebilmesi.
 - **Grafik Oluşturma:** Hastalık bölümlerine göre hasta sayısının grafiğinin oluşturulması.
+## Kullanım
+Uygulamayı başlattıktan sonra giriş ekranından kullanıcı adı ve şifre ile giriş yapabilirsiniz.
+Randevu yönetim ekranında randevu oluşturabilir, güncelleyebilir veya iptal edebilirsiniz.
+Doktor ve sekreter işlemleri ekranlarından ilgili kullanıcıları yönetebilirsiniz.
+Rapor ve grafik oluşturma ekranlarından ilgili işlemleri gerçekleştirebilirsiniz.
 
 ## Gereksinimler
 
