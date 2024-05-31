@@ -24,8 +24,8 @@ namespace HastaneRandevu
 
         private void clearFieldsTxt_Click(object sender, EventArgs e)
         {
-            txtUser.Clear();    // Username girilen textboxtaki metni silmeye yarayan kod
-            txtPw.Clear();      // Şifre girilen textboxtaki metni silmeye yarayan kod
+            txtUser.Clear();    
+            txtPw.Clear();     
             txtUser.Focus();
         }
 
@@ -39,7 +39,7 @@ namespace HastaneRandevu
             if (txtUser.Text == "Kullanıcı Adınız")
             {
                 txtUser.Text = "";
-                txtUser.ForeColor = Color.Gray; // Opsiyonel: Siyah renkte görünecek
+                txtUser.ForeColor = Color.Gray; 
             }
         }
 
@@ -48,7 +48,7 @@ namespace HastaneRandevu
             if (string.IsNullOrWhiteSpace(txtUser.Text))
             {
                 txtUser.Text = "Kullanıcı Adınız";
-                txtUser.ForeColor = Color.Gray; // Opsiyonel: Gri renkte görünecek
+                txtUser.ForeColor = Color.Gray; 
             }
         }
 
@@ -57,7 +57,7 @@ namespace HastaneRandevu
             if (txtPw.Text == "********")
             {
                 txtPw.Text = "";
-                txtPw.PasswordChar = '*'; // Şifre alanındaki karakterleri göster
+                txtPw.PasswordChar = '*'; 
             }
         }
 
@@ -66,7 +66,7 @@ namespace HastaneRandevu
             if (string.IsNullOrWhiteSpace(txtPw.Text))
             {
                 txtPw.Text = "********";
-                txtPw.PasswordChar = '\0'; // Şifre alanındaki karakterleri gizle
+                txtPw.PasswordChar = '\0';
             }
         }
 
@@ -133,6 +133,13 @@ namespace HastaneRandevu
             {
                 Application.Exit();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PasswordReset passwordResetForm = new PasswordReset();
+            passwordResetForm.Show();
+            this.Hide();
         }
     }
 }

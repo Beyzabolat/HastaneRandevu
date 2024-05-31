@@ -48,25 +48,24 @@ namespace DataAccessLayer
                     komut2.Connection.Open();
                 }
 
-                komut2.Parameters.AddWithValue("@P1", p.Hstname);
-                komut2.Parameters.AddWithValue("@P2", p.Hstsurname);
-                komut2.Parameters.AddWithValue("@P3", p.Hsttckn);
-                komut2.Parameters.AddWithValue("@P4", p.Hstphone);
-                komut2.Parameters.AddWithValue("@P5", p.Hstbolum);
-                komut2.Parameters.AddWithValue("@P6", p.Docname);
+                komut2.Parameters.Add("@P1", OleDbType.VarChar).Value = p.Hstname;
+                komut2.Parameters.Add("@P2", OleDbType.VarChar).Value = p.Hstsurname;
+                komut2.Parameters.Add("@P3", OleDbType.VarChar).Value = p.Hsttckn;
+                komut2.Parameters.Add("@P4", OleDbType.VarChar).Value = p.Hstphone;
+                komut2.Parameters.Add("@P5", OleDbType.VarChar).Value = p.Hstbolum;
+                komut2.Parameters.Add("@P6", OleDbType.VarChar).Value = p.Docname;
 
-                // Tarih parametresi için özel tür kontrolü
                 if (p.Tarih is DateTime tarihValue)
                 {
-                    komut2.Parameters.AddWithValue("@P7", tarihValue);
+                    komut2.Parameters.Add("@P7", OleDbType.Date).Value = tarihValue;
                 }
                 else
                 {
                     throw new ArgumentException("Tarih bir DateTime nesnesi olmalıdır");
                 }
 
-                komut2.Parameters.AddWithValue("@P8", p.Saat);
-                komut2.Parameters.AddWithValue("@P9", p.Rapor);
+                komut2.Parameters.Add("@P8", OleDbType.VarChar).Value = p.Saat;
+                komut2.Parameters.Add("@P9", OleDbType.VarChar).Value = p.Rapor;
 
                 return komut2.ExecuteNonQuery();
             }

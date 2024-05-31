@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EntityLayer;
 using DataAccessLayer;
+using System.Data.OleDb;
 
 namespace LogicLayer
 {
@@ -52,6 +53,21 @@ namespace LogicLayer
         public static int LLSecGiris(EntitySec p)
         {
             return DALSec.SecGiris(p);
+        }
+        public static string LLSekreterSifreAl(string email)
+        {
+            using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\admin\\Desktop\\HastaneRandevu\\HastaneRandevuKayıt.accdb;"))
+            {
+                string query = "SELECT SecPASSWORD FROM SecBilgi WHERE SecMAİL = @p1";
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                cmd.Parameters.AddWithValue("@p1", email);
+
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                conn.Close();
+
+                return result != null ? result.ToString() : null;
+            }
         }
     }
 }

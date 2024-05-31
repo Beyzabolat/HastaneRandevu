@@ -38,8 +38,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.txtMainMenu = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.txt_SekreterAdi = new System.Windows.Forms.TextBox();
@@ -54,6 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,15 +72,16 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.txtMainMenu);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.txt_Username);
             this.groupBox1.Controls.Add(this.txt_SekreterAdi);
             this.groupBox1.Controls.Add(this.txt_SekreterSoyadi);
             this.groupBox1.Controls.Add(this.txt_Password);
             this.groupBox1.Controls.Add(this.txt_Telefon);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox1.Location = new System.Drawing.Point(75, 177);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -112,24 +114,24 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.SteelBlue;
             this.label12.Location = new System.Drawing.Point(155, 104);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 31);
+            this.label12.Size = new System.Drawing.Size(51, 32);
             this.label12.TabIndex = 0;
             this.label12.Text = "Adı";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.ForeColor = System.Drawing.Color.SteelBlue;
             this.label11.Location = new System.Drawing.Point(672, 104);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 31);
+            this.label11.Size = new System.Drawing.Size(122, 32);
             this.label11.TabIndex = 0;
             this.label11.Text = "Username";
             // 
@@ -158,24 +160,24 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.SteelBlue;
             this.label13.Location = new System.Drawing.Point(155, 164);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 31);
+            this.label13.Size = new System.Drawing.Size(88, 32);
             this.label13.TabIndex = 0;
             this.label13.Text = "Soyadı";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.SteelBlue;
             this.label9.Location = new System.Drawing.Point(672, 185);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 31);
+            this.label9.Size = new System.Drawing.Size(114, 32);
             this.label9.TabIndex = 0;
             this.label9.Text = "Password";
             // 
@@ -188,32 +190,32 @@
             this.panel4.Size = new System.Drawing.Size(242, 1);
             this.panel4.TabIndex = 14;
             // 
+            // txtMainMenu
+            // 
+            this.txtMainMenu.AutoSize = true;
+            this.txtMainMenu.BackColor = System.Drawing.Color.Transparent;
+            this.txtMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtMainMenu.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMainMenu.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtMainMenu.Location = new System.Drawing.Point(1102, 268);
+            this.txtMainMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtMainMenu.Name = "txtMainMenu";
+            this.txtMainMenu.Size = new System.Drawing.Size(107, 29);
+            this.txtMainMenu.TabIndex = 34;
+            this.txtMainMenu.Text = "Ana Menü";
+            this.txtMainMenu.Click += new System.EventHandler(this.txtMainMenu_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label14.ForeColor = System.Drawing.Color.SteelBlue;
             this.label14.Location = new System.Drawing.Point(155, 220);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 31);
+            this.label14.Size = new System.Drawing.Size(98, 32);
             this.label14.TabIndex = 0;
             this.label14.Text = "Telefon";
-            // 
-            // txtMainMenu
-            // 
-            this.txtMainMenu.AutoSize = true;
-            this.txtMainMenu.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtMainMenu.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, System.Drawing.FontStyle.Bold);
-            this.txtMainMenu.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtMainMenu.Location = new System.Drawing.Point(51, 288);
-            this.txtMainMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtMainMenu.Name = "txtMainMenu";
-            this.txtMainMenu.Size = new System.Drawing.Size(116, 27);
-            this.txtMainMenu.TabIndex = 34;
-            this.txtMainMenu.Text = "Ana Menü";
-            this.txtMainMenu.Click += new System.EventHandler(this.txtMainMenu_Click);
             // 
             // panel1
             // 
@@ -296,8 +298,8 @@
             this.btn_List.FlatAppearance.BorderSize = 3;
             this.btn_List.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_List.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_List.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_List.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_List.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_List.ForeColor = System.Drawing.Color.SteelBlue;
             this.btn_List.Location = new System.Drawing.Point(167, 506);
             this.btn_List.Margin = new System.Windows.Forms.Padding(4);
             this.btn_List.Name = "btn_List";
@@ -313,8 +315,8 @@
             this.btn_Add.FlatAppearance.BorderSize = 3;
             this.btn_Add.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Add.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Add.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Add.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Add.ForeColor = System.Drawing.Color.SteelBlue;
             this.btn_Add.Location = new System.Drawing.Point(428, 506);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
@@ -330,8 +332,8 @@
             this.btn_Delete.FlatAppearance.BorderSize = 3;
             this.btn_Delete.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Delete.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Delete.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Delete.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Delete.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Delete.ForeColor = System.Drawing.Color.SteelBlue;
             this.btn_Delete.Location = new System.Drawing.Point(959, 506);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Delete.Name = "btn_Delete";
@@ -347,8 +349,8 @@
             this.btn_Update.FlatAppearance.BorderSize = 3;
             this.btn_Update.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Update.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Update.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Update.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Update.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Update.ForeColor = System.Drawing.Color.SteelBlue;
             this.btn_Update.Location = new System.Drawing.Point(693, 506);
             this.btn_Update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Update.Name = "btn_Update";
@@ -360,6 +362,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(75, 605);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -371,17 +375,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
             this.label1.Location = new System.Drawing.Point(842, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 52);
+            this.label1.Size = new System.Drawing.Size(475, 56);
             this.label1.TabIndex = 114;
             this.label1.Text = "SEKRETER İŞLEMLERİ";
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::HastaneRandevu.Properties.Resources.icon;
             this.pictureBox1.Location = new System.Drawing.Point(75, 27);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -402,11 +407,23 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(1204, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 18);
+            this.label2.TabIndex = 119;
+            this.label2.Text = "Alanları Temizle";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // SekreterIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1471, 937);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -459,5 +476,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
     }
 }

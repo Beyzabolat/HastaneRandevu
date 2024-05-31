@@ -24,35 +24,52 @@ namespace HastaneRandevu
         }
         public string doktorad;
         public string doktorsoyad;
+
         private void btn_Kaydet_Click(object sender, EventArgs e)
         {
             EntityHst ent = new EntityHst();
             ent.Hstid = Convert.ToInt32(textBox1.Text);
-            ent.Rapor = txt_Rapor.Text;                                     //Hasta raporunun
-            LogicHst.LLHstGuncelle2(ent);                                   //eklenmesini sağlayan kod bloğu
+            ent.Rapor = txt_Rapor.Text;                                   
+            LogicHst.LLHstGuncelle2(ent);                                  
 
-            EntityDoc doc = new EntityDoc();                                //raporu kaydettikten sonra
-            doc.Docname = doktorad;                                         //datagridView üzerine
-            doc.Docsurname = doktorsoyad;                                   //aynı hastaların listelenmesini
-            List<EntityHst> PerList = LogicHst.LLDoktoraGoreHstList(doc);   //sağlayan kod bloğu
+            EntityDoc doc = new EntityDoc();                               
+            doc.Docname = doktorad;                                        
+            doc.Docsurname = doktorsoyad;                                   
+            List<EntityHst> PerList = LogicHst.LLDoktoraGoreHstList(doc);   
             dataGridView1.DataSource = PerList;
         }
 
         private void btn_List_Click(object sender, EventArgs e)
         {
-            EntityDoc doc = new EntityDoc();                                    //sadece o doktora 
-            doc.Docname = doktorad;                                             //randevusu olan  
-            doc.Docsurname = doktorsoyad;                                       //hastaların listelenmesini 
-                                                                                //sağlayan kodlar
+            EntityDoc doc = new EntityDoc();                                  
+            doc.Docname = doktorad;                                            
+            doc.Docsurname = doktorsoyad;                                     
+                                                                              
             List<EntityHst> PerList = LogicHst.LLDoktoraGoreHstList(doc);
             dataGridView1.DataSource = PerList;
         }
+
         private void listeleme(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;                                         //dataGridView üzerinde
-            DataGridViewRow selectedRow = dataGridView1.Rows[index];        //listelenen hastaların
-            txt_Rapor.Text = selectedRow.Cells[9].Value.ToString();         //isimlerine tıklandığında raporunun
-            textBox1.Text = selectedRow.Cells[0].Value.ToString();          //textBox'a yansıtılmasını sağlayan fonksiyon
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[index];
+            textBox1.Text = selectedRow.Cells[0].Value.ToString();
+            txt_Adi.Text = selectedRow.Cells[1].Value.ToString(); 
+            txt_Soyadi.Text = selectedRow.Cells[2].Value.ToString(); 
+            txt_TC.Text = selectedRow.Cells[3].Value.ToString(); 
+            
+            lbl_ReceteNo.Text = GenerateRandomPrescriptionNumber(); 
+            string randevuTarihi = selectedRow.Cells[7].Value.ToString();
+            Tarih.Text = randevuTarihi; 
+            txt_Rapor.Text = selectedRow.Cells[9].Value.ToString(); 
+            
+            Tarih.Text = randevuTarihi; 
+        }
+
+        private string GenerateRandomPrescriptionNumber()
+        {
+            Random random = new Random();
+            return random.Next(100000, 999999).ToString();
         }
 
         private void btn_Sil_Click(object sender, EventArgs e)
@@ -75,28 +92,28 @@ namespace HastaneRandevu
             {
                 try
                 {
-                    var mailAddress = new MailAddress(txt_Mail.Text); // E-posta adresini kontrol et
+                    var mailAddress = new MailAddress(txt_Mail.Text);
                     MailMessage mesaj = new MailMessage();
                     mesaj.From = new MailAddress("saglikliyasamhastanesi@gmail.com");
-                    mesaj.To.Add(mailAddress.Address); // Geçerli ise, e-posta adresini kullan
+                    mesaj.To.Add(mailAddress.Address); 
                     mesaj.Subject = "# Sağlıklı Yaşam Hastanesi Doktor Raporu #";
 
-                    // E-posta içeriği
+                   
                     StringBuilder body = new StringBuilder();
-                    body.AppendLine($"Doktor Adı: {doktorad} {doktorsoyad}");
-                    body.AppendLine($"Hasta ID: {textBox1.Text}");
-                    body.AppendLine("Görüşme Raporu:");
-                    body.AppendLine(txt_Rapor.Text);
+                    body.AppendLine($"Sn. {txt_Adi.Text},");
+                    body.AppendLine($"{Tarih.Text} tarihinde Sağlıklı Yaşam Hastanesi'nde yazılan reçete numaranız {lbl_ReceteNo.Text} ve doktor görüşü ekte bulunmaktadır.");
+                    body.AppendLine("Geçmiş olsun.");
+                    body.AppendLine($"Doktor Görüşü: {txt_Rapor.Text}");
                     mesaj.Body = body.ToString();
 
-                    // SmtpClient yapılandırması
+                   
                     SmtpClient a = new SmtpClient();
                     a.Credentials = new System.Net.NetworkCredential("saglikliyasamhastanesi@gmail.com", "jjmt nkds bkcc qkkn");
                     a.Port = 587;
                     a.Host = "smtp.gmail.com";
                     a.EnableSsl = true;
 
-                    // E-postayı gönderme
+                   
                     a.Send(mesaj);
                     MessageBox.Show("Mail Gönderilmiştir");
                 }
@@ -131,18 +148,18 @@ namespace HastaneRandevu
 
         private void btn_Pdf_Click(object sender, EventArgs e)
         {
-            // PDF oluşturma işlemleri
+            
             try
             {
                 string pdfFilePath = "C:\\Users\\admin\\Desktop\\HastaRaporu.pdf";
 
-                // PDF belgesi oluştur
+                
                 Document pdfDoc = new Document();
                 PdfWriter.GetInstance(pdfDoc, new FileStream(pdfFilePath, FileMode.Create));
 
                 pdfDoc.Open();
 
-                // Doktor ve hasta bilgilerini ekle
+                
                 pdfDoc.Add(new Paragraph($"Doktor Adı: {doktorad} {doktorsoyad}"));
                 pdfDoc.Add(new Paragraph($"Hasta ID: {textBox1.Text}"));
                 pdfDoc.Add(new Paragraph("Görüşme Raporu:"));
@@ -165,6 +182,11 @@ namespace HastaneRandevu
             {
                 Application.Exit();
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -49,7 +49,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(497, 577);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -60,30 +60,32 @@
             // btn_DocLogin
             // 
             this.btn_DocLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DocLogin.FlatAppearance.BorderSize = 3;
             this.btn_DocLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DocLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_DocLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_DocLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_DocLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_DocLogin.Location = new System.Drawing.Point(0, 0);
             this.btn_DocLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DocLogin.Name = "btn_DocLogin";
             this.btn_DocLogin.Size = new System.Drawing.Size(424, 55);
             this.btn_DocLogin.TabIndex = 22;
-            this.btn_DocLogin.Text = "Doktor Girişi";
+            this.btn_DocLogin.Text = "DOKTOR GİRİŞİ";
             this.btn_DocLogin.UseVisualStyleBackColor = false;
             this.btn_DocLogin.Click += new System.EventHandler(this.btn_DocLogin_Click);
             // 
             // btn_SecLogin
             // 
             this.btn_SecLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SecLogin.FlatAppearance.BorderSize = 3;
             this.btn_SecLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SecLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_SecLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_SecLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_SecLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_SecLogin.Location = new System.Drawing.Point(0, 0);
             this.btn_SecLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SecLogin.Name = "btn_SecLogin";
             this.btn_SecLogin.Size = new System.Drawing.Size(424, 55);
             this.btn_SecLogin.TabIndex = 23;
-            this.btn_SecLogin.Text = "Sekreter Girişi";
+            this.btn_SecLogin.Text = "SEKRETER GİRİŞİ";
             this.btn_SecLogin.UseVisualStyleBackColor = false;
             this.btn_SecLogin.Click += new System.EventHandler(this.btn_SecLogin_Click);
             // 
@@ -100,9 +102,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::HastaneRandevu.Properties.Resources._7;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(424, 230);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,9 +125,9 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::HastaneRandevu.Properties.Resources._8;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 49);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 62);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(424, 230);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

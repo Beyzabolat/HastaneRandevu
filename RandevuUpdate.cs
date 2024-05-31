@@ -72,7 +72,7 @@ namespace HastaneRandevu
             }
             else
             {
-                dateTimePicker1.Value = dateTimePicker1.MinDate; // Geçersiz tarih formatında ise
+                dateTimePicker1.Value = dateTimePicker1.MinDate;
             }
 
             saat = selectedRow.Cells[8].Value.ToString();
@@ -91,22 +91,20 @@ namespace HastaneRandevu
 
         private void comboBox_Bolum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Önce ComboBox'ı temizleyelim
+           
             comboBox_Doktoradi.Items.Clear();
 
-            // Seçilen bölüm adını alalım
+           
             string selectedBolum = comboBox_Bolum.SelectedItem.ToString();
 
-            // LogicLayer'daki LLFilter metodu kullanarak seçilen bölüme uygun doktorları getirelim
+           
             OleDbDataReader dr = LogicHst.LLFilter(selectedBolum);
 
-            // Doktorları ComboBox'a ekleyelim
             while (dr.Read())
             {
                 comboBox_Doktoradi.Items.Add(dr["DocAD"] + " " + dr["DocSOYAD"]);
             }
 
-            // DataReader'ı kapatmayı unutmayalım
             dr.Close();
         }
 
@@ -184,7 +182,7 @@ namespace HastaneRandevu
         {
             dataGridView1.CellClick += new DataGridViewCellEventHandler(listeleme);
 
-            // Saat ve Dakika ComboBox'larını dolduralım
+            
             for (int i = 0; i <= 23; i++)
             {
                 comboBox_Saat.Items.Add(i.ToString("00"));
@@ -196,7 +194,7 @@ namespace HastaneRandevu
             comboBox_Saat.SelectedIndex = 0;
             comboBox_Dakika.SelectedIndex = 0;
 
-            // Bölüm ComboBox'ını dolduralım
+           
             List<string> bolumListesi = new List<string>
     {
         "Kardiyoloji", "Ortopedi", "Dahiliye", "Genel Cerrahi", "Psikiyatri",
@@ -209,7 +207,7 @@ namespace HastaneRandevu
             dateTimePicker1.MinDate = new DateTime(2000, 1, 1);
             dateTimePicker1.MaxDate = DateTime.Now.AddYears(10);  // Örnek: Şu andan itibaren 10 yıl sonrası
 
-            // Doktorları dolduralım
+          
             OleDbDataReader dr = LogicHst.LLFilter(comboBox_Bolum.Text);
             while (dr.Read())
             {
@@ -225,6 +223,29 @@ namespace HastaneRandevu
             {
                 Application.Exit();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+        private void ClearFields()
+        {
+            textBox1.Text = "";
+            txt_HastaAdi.Text = "";
+            txt_HastaSoyadi.Text = "";
+            txt_TCKN.Text = "";
+            txt_Telefon.Text = "";
+            comboBox_Bolum.SelectedIndex = -1;
+            comboBox_Doktoradi.SelectedIndex = -1;
+            dateTimePicker1.Value = dateTimePicker1.MinDate;
+            comboBox_Saat.SelectedIndex = 0;
+            comboBox_Dakika.SelectedIndex = 0;
         }
     }
 }

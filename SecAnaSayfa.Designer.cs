@@ -51,12 +51,12 @@
             // 
             this.txt_MainMenu.AutoSize = true;
             this.txt_MainMenu.BackColor = System.Drawing.Color.Transparent;
-            this.txt_MainMenu.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Bold);
+            this.txt_MainMenu.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_MainMenu.ForeColor = System.Drawing.Color.Teal;
             this.txt_MainMenu.Location = new System.Drawing.Point(41, 766);
             this.txt_MainMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_MainMenu.Name = "txt_MainMenu";
-            this.txt_MainMenu.Size = new System.Drawing.Size(138, 33);
+            this.txt_MainMenu.Size = new System.Drawing.Size(143, 36);
             this.txt_MainMenu.TabIndex = 18;
             this.txt_MainMenu.Text = "Ana Sayfa";
             this.txt_MainMenu.Click += new System.EventHandler(this.txt_MainMenu_Click);
@@ -64,9 +64,10 @@
             // btn_RndEkle
             // 
             this.btn_RndEkle.BackColor = System.Drawing.Color.Transparent;
+            this.btn_RndEkle.FlatAppearance.BorderSize = 0;
             this.btn_RndEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RndEkle.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_RndEkle.ForeColor = System.Drawing.Color.Black;
+            this.btn_RndEkle.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_RndEkle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_RndEkle.Location = new System.Drawing.Point(47, 61);
             this.btn_RndEkle.Name = "btn_RndEkle";
             this.btn_RndEkle.Size = new System.Drawing.Size(256, 85);
@@ -78,9 +79,10 @@
             // btn_HstIslem
             // 
             this.btn_HstIslem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_HstIslem.FlatAppearance.BorderSize = 0;
             this.btn_HstIslem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HstIslem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_HstIslem.ForeColor = System.Drawing.Color.Black;
+            this.btn_HstIslem.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_HstIslem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_HstIslem.Location = new System.Drawing.Point(338, 414);
             this.btn_HstIslem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_HstIslem.Name = "btn_HstIslem";
@@ -94,21 +96,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 27F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(799, 766);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(487, 59);
+            this.label1.Size = new System.Drawing.Size(508, 64);
             this.label1.TabIndex = 16;
             this.label1.Text = "Sekreter Ana Sayfası";
             // 
             // btn_DocIslem
             // 
             this.btn_DocIslem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DocIslem.FlatAppearance.BorderSize = 0;
             this.btn_DocIslem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DocIslem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_DocIslem.ForeColor = System.Drawing.Color.Black;
+            this.btn_DocIslem.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_DocIslem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_DocIslem.Location = new System.Drawing.Point(338, 61);
             this.btn_DocIslem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DocIslem.Name = "btn_DocIslem";
@@ -121,9 +124,10 @@
             // btn_SecIslem
             // 
             this.btn_SecIslem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SecIslem.FlatAppearance.BorderSize = 0;
             this.btn_SecIslem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SecIslem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_SecIslem.ForeColor = System.Drawing.Color.Black;
+            this.btn_SecIslem.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_SecIslem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_SecIslem.Location = new System.Drawing.Point(47, 414);
             this.btn_SecIslem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SecIslem.Name = "btn_SecIslem";
@@ -136,7 +140,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::HastaneRandevu.Properties.Resources._10;
             this.pictureBox1.Location = new System.Drawing.Point(47, 152);
             this.pictureBox1.Name = "pictureBox1";
@@ -148,7 +152,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::HastaneRandevu.Properties.Resources._13;
             this.pictureBox2.Location = new System.Drawing.Point(338, 510);
             this.pictureBox2.Name = "pictureBox2";
@@ -160,7 +164,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Image = global::HastaneRandevu.Properties.Resources._12;
             this.pictureBox3.Location = new System.Drawing.Point(47, 510);
             this.pictureBox3.Name = "pictureBox3";
@@ -172,7 +176,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox4.Image = global::HastaneRandevu.Properties.Resources._11;
             this.pictureBox4.Location = new System.Drawing.Point(338, 152);
             this.pictureBox4.Name = "pictureBox4";

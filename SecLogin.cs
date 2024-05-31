@@ -54,7 +54,7 @@ namespace HastaneRandevu
             if (txtPw2.Text.Equals(@"********"))
             {
                 txtPw2.Text = "";
-                txtPw2.PasswordChar = '*'; // Şifre alanındaki karakterleri göster
+                txtPw2.PasswordChar = '*'; 
             }
         }
 
@@ -96,7 +96,7 @@ namespace HastaneRandevu
             if (txtUser2.Text == "Kullanıcı Adınız")
             {
                 txtUser2.Text = "";
-                txtUser2.ForeColor = Color.Gray; // Opsiyonel: Siyah renkte görünecek
+                txtUser2.ForeColor = Color.Gray; 
             }
         }
 
@@ -105,7 +105,7 @@ namespace HastaneRandevu
             if (string.IsNullOrWhiteSpace(txtUser2.Text))
             {
                 txtUser2.Text = "Kullanıcı Adınız";
-                txtUser2.ForeColor = Color.Gray; // Opsiyonel: Gri renkte görünecek
+                txtUser2.ForeColor = Color.Gray; 
             }
         }
 
@@ -114,8 +114,8 @@ namespace HastaneRandevu
             if (txtPw2.Text == "********")
             {
                 txtPw2.Text = "";
-                txtPw2.ForeColor = Color.Gray; // Opsiyonel: Siyah renkte görünecek
-                txtPw2.PasswordChar = '*'; // Şifre alanındaki karakterleri göster
+                txtPw2.ForeColor = Color.Gray; 
+                txtPw2.PasswordChar = '*'; 
             }
         }
 
@@ -124,8 +124,8 @@ namespace HastaneRandevu
             if (string.IsNullOrWhiteSpace(txtPw2.Text))
             {
                 txtPw2.Text = "********";
-                txtPw2.ForeColor = Color.Gray; // Opsiyonel: Gri renkte görünecek
-                txtPw2.PasswordChar = '\0'; // Şifre alanındaki karakterleri gizle
+                txtPw2.ForeColor = Color.Gray;
+                txtPw2.PasswordChar = '\0'; 
             }
         }
 
@@ -147,6 +147,13 @@ namespace HastaneRandevu
         {
             Opening loginScreen = new Opening();
             loginScreen.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PasswordResetSec passwordResetForm = new PasswordResetSec();
+            passwordResetForm.Show();
             this.Hide();
         }
     }

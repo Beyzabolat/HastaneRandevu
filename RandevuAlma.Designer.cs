@@ -54,6 +54,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_DocLogin = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,48 +79,48 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
             this.label6.Location = new System.Drawing.Point(23, 115);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 29);
+            this.label6.Size = new System.Drawing.Size(51, 32);
             this.label6.TabIndex = 0;
             this.label6.Text = "Adı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
             this.label2.Location = new System.Drawing.Point(48, 109);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 29);
+            this.label2.Size = new System.Drawing.Size(87, 32);
             this.label2.TabIndex = 4;
             this.label2.Text = "Bölüm ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.SteelBlue;
             this.label7.Location = new System.Drawing.Point(25, 204);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 29);
+            this.label7.Size = new System.Drawing.Size(88, 32);
             this.label7.TabIndex = 0;
             this.label7.Text = "Soyadı";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.SteelBlue;
             this.label3.Location = new System.Drawing.Point(48, 203);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 29);
+            this.label3.Size = new System.Drawing.Size(136, 32);
             this.label3.TabIndex = 5;
             this.label3.Text = "Doktor Adı";
             // 
@@ -159,7 +160,8 @@
             this.groupBox2.Controls.Add(this.comboBox_Bolum);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox2.Location = new System.Drawing.Point(57, 165);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -172,7 +174,7 @@
             // 
             // comboBox_Dakika
             // 
-            this.comboBox_Dakika.BackColor = System.Drawing.Color.LightCyan;
+            this.comboBox_Dakika.BackColor = System.Drawing.Color.Azure;
             this.comboBox_Dakika.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboBox_Dakika.FormattingEnabled = true;
             this.comboBox_Dakika.ItemHeight = 23;
@@ -184,7 +186,7 @@
             // 
             // comboBox_Saat
             // 
-            this.comboBox_Saat.BackColor = System.Drawing.Color.LightCyan;
+            this.comboBox_Saat.BackColor = System.Drawing.Color.Azure;
             this.comboBox_Saat.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboBox_Saat.FormattingEnabled = true;
             this.comboBox_Saat.ItemHeight = 23;
@@ -207,7 +209,7 @@
             // 
             // comboBox_Doktoradi
             // 
-            this.comboBox_Doktoradi.BackColor = System.Drawing.Color.LightCyan;
+            this.comboBox_Doktoradi.BackColor = System.Drawing.Color.Azure;
             this.comboBox_Doktoradi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboBox_Doktoradi.FormattingEnabled = true;
             this.comboBox_Doktoradi.ItemHeight = 23;
@@ -219,7 +221,7 @@
             // 
             // comboBox_Bolum
             // 
-            this.comboBox_Bolum.BackColor = System.Drawing.Color.LightCyan;
+            this.comboBox_Bolum.BackColor = System.Drawing.Color.Azure;
             this.comboBox_Bolum.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboBox_Bolum.FormattingEnabled = true;
             this.comboBox_Bolum.ItemHeight = 23;
@@ -244,7 +246,8 @@
             this.groupBox1.Controls.Add(this.txt_HastaSoyadi);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_Telefon);
-            this.groupBox1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.Color.SteelBlue;
             this.groupBox1.Location = new System.Drawing.Point(840, 165);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -272,12 +275,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
             this.label8.Location = new System.Drawing.Point(24, 379);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 29);
+            this.label8.Size = new System.Drawing.Size(98, 32);
             this.label8.TabIndex = 0;
             this.label8.Text = "Telefon";
             // 
@@ -319,12 +322,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
             this.label1.Location = new System.Drawing.Point(23, 288);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 29);
+            this.label1.Size = new System.Drawing.Size(117, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kimlik No";
             // 
@@ -344,6 +347,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(57, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -356,9 +360,10 @@
             // 
             // btn_DocLogin
             // 
-            this.btn_DocLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DocLogin.BackColor = System.Drawing.Color.Azure;
+            this.btn_DocLogin.FlatAppearance.BorderSize = 0;
             this.btn_DocLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DocLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_DocLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_DocLogin.ForeColor = System.Drawing.Color.SteelBlue;
             this.btn_DocLogin.Location = new System.Drawing.Point(1040, 72);
             this.btn_DocLogin.Margin = new System.Windows.Forms.Padding(4);
@@ -372,7 +377,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__10_;
-            this.pictureBox3.Location = new System.Drawing.Point(1315, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(1328, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 56);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -380,12 +385,24 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(1018, 653);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 18);
+            this.label4.TabIndex = 120;
+            this.label4.Text = "Alanları Temizle";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // RandevuAlma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1392, 727);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btn_DocLogin);
             this.Controls.Add(this.txtMainMenu);
@@ -436,5 +453,6 @@
         private System.Windows.Forms.ComboBox comboBox_Dakika;
         private System.Windows.Forms.ComboBox comboBox_Saat;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label4;
     }
 }

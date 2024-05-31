@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grafik1));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtMainMenu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -67,11 +68,27 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // txtMainMenu
+            // 
+            this.txtMainMenu.AutoSize = true;
+            this.txtMainMenu.BackColor = System.Drawing.Color.Transparent;
+            this.txtMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtMainMenu.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMainMenu.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtMainMenu.Location = new System.Drawing.Point(64, 45);
+            this.txtMainMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtMainMenu.Name = "txtMainMenu";
+            this.txtMainMenu.Size = new System.Drawing.Size(123, 32);
+            this.txtMainMenu.TabIndex = 118;
+            this.txtMainMenu.Text = "Ana Menü";
+            this.txtMainMenu.Click += new System.EventHandler(this.txtMainMenu_Click);
+            // 
             // Grafik1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 626);
+            this.Controls.Add(this.txtMainMenu);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.chart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -82,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,5 +107,6 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label txtMainMenu;
     }
 }

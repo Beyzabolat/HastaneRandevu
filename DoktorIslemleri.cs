@@ -157,5 +157,20 @@ namespace HastaneRandevu
                 Application.Exit();
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+        private void ClearFields()
+        {
+            textBox1.Text = "";
+            txt_DoktorAdi.Text = "";
+            txt_DoktorSoyadi.Text = "";
+            comboBox_Bolum.SelectedIndex = -1;
+            txt_Telefon.Text = "";
+            txt_Username.Text = "";
+            txt_Password.Text = "";
+        }
     }
 }

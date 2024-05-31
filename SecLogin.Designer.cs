@@ -38,20 +38,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.loginTxt = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.loginPic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.loginPic = new System.Windows.Forms.PictureBox();
             this.usernamePic = new System.Windows.Forms.PictureBox();
             this.passwordPic = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             this.SuspendLayout();
@@ -124,14 +125,14 @@
             // clearFieldsTxt
             // 
             this.clearFieldsTxt.AutoSize = true;
-            this.clearFieldsTxt.BackColor = System.Drawing.Color.Silver;
+            this.clearFieldsTxt.BackColor = System.Drawing.Color.White;
             this.clearFieldsTxt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearFieldsTxt.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.clearFieldsTxt.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.clearFieldsTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.clearFieldsTxt.Location = new System.Drawing.Point(573, 492);
             this.clearFieldsTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.clearFieldsTxt.Name = "clearFieldsTxt";
-            this.clearFieldsTxt.Size = new System.Drawing.Size(175, 27);
+            this.clearFieldsTxt.Size = new System.Drawing.Size(169, 29);
             this.clearFieldsTxt.TabIndex = 43;
             this.clearFieldsTxt.Text = "Alanları Temizle";
             this.clearFieldsTxt.Click += new System.EventHandler(this.clearFieldsTxt_Click);
@@ -157,12 +158,12 @@
             // loginTxt
             // 
             this.loginTxt.AutoSize = true;
-            this.loginTxt.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginTxt.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.loginTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.loginTxt.Location = new System.Drawing.Point(16, 368);
             this.loginTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loginTxt.Name = "loginTxt";
-            this.loginTxt.Size = new System.Drawing.Size(293, 52);
+            this.loginTxt.Size = new System.Drawing.Size(301, 56);
             this.loginTxt.TabIndex = 40;
             this.loginTxt.Text = "Sekreter Giriş";
             this.loginTxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,19 +176,31 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(337, 570);
+            this.panel3.Size = new System.Drawing.Size(337, 606);
             this.panel3.TabIndex = 50;
+            // 
+            // loginPic
+            // 
+            this.loginPic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.loginPic.Image = ((System.Drawing.Image)(resources.GetObject("loginPic.Image")));
+            this.loginPic.Location = new System.Drawing.Point(25, 51);
+            this.loginPic.Margin = new System.Windows.Forms.Padding(4);
+            this.loginPic.Name = "loginPic";
+            this.loginPic.Size = new System.Drawing.Size(269, 284);
+            this.loginPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loginPic.TabIndex = 39;
+            this.loginPic.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(446, 117);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 27);
+            this.label1.Size = new System.Drawing.Size(130, 29);
             this.label1.TabIndex = 51;
             this.label1.Text = "Kullanıcı Adı";
             // 
@@ -195,21 +208,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(446, 250);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 27);
+            this.label2.Size = new System.Drawing.Size(64, 29);
             this.label2.TabIndex = 52;
             this.label2.Text = "Şifre";
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(690, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(730, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(76, 51);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 55;
             this.pictureBox3.TabStop = false;
@@ -217,6 +231,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(386, 237);
             this.pictureBox2.Name = "pictureBox2";
@@ -227,6 +242,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(386, 111);
             this.pictureBox1.Name = "pictureBox1";
@@ -234,17 +250,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
-            // 
-            // loginPic
-            // 
-            this.loginPic.Image = ((System.Drawing.Image)(resources.GetObject("loginPic.Image")));
-            this.loginPic.Location = new System.Drawing.Point(25, 51);
-            this.loginPic.Margin = new System.Windows.Forms.Padding(4);
-            this.loginPic.Name = "loginPic";
-            this.loginPic.Size = new System.Drawing.Size(269, 284);
-            this.loginPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.loginPic.TabIndex = 39;
-            this.loginPic.TabStop = false;
             // 
             // usernamePic
             // 
@@ -271,24 +276,39 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(381, 492);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 27);
+            this.label3.Size = new System.Drawing.Size(115, 29);
             this.label3.TabIndex = 56;
             this.label3.Text = "Ana Sayfa";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Location = new System.Drawing.Point(386, 533);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(351, 50);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "Şifremi Unuttum";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SecLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(778, 570);
+            this.ClientSize = new System.Drawing.Size(778, 606);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -312,10 +332,10 @@
             this.Text = "Sekreter Girişi";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usernamePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).EndInit();
             this.ResumeLayout(false);
@@ -343,5 +363,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

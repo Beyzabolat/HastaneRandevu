@@ -43,12 +43,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 27F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(54, 91);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(459, 59);
+            this.label1.Size = new System.Drawing.Size(460, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "Doktor Ana Sayfası";
             // 
@@ -56,12 +56,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(285, 183);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 27);
+            this.label2.Size = new System.Drawing.Size(69, 29);
             this.label2.TabIndex = 15;
             this.label2.Text = "label2";
             // 
@@ -69,25 +69,25 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(73, 183);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 27);
+            this.label3.Size = new System.Drawing.Size(121, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hoşgeldiniz";
             // 
             // btn_HstIslem
             // 
-            this.btn_HstIslem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_HstIslem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_HstIslem.BackColor = System.Drawing.Color.LightCyan;
+            this.btn_HstIslem.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btn_HstIslem.FlatAppearance.BorderSize = 3;
             this.btn_HstIslem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btn_HstIslem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_HstIslem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HstIslem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_HstIslem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_HstIslem.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_HstIslem.ForeColor = System.Drawing.Color.Teal;
             this.btn_HstIslem.Location = new System.Drawing.Point(114, 286);
             this.btn_HstIslem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_HstIslem.Name = "btn_HstIslem";
@@ -99,14 +99,14 @@
             // 
             // btn_Grafik1
             // 
-            this.btn_Grafik1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_Grafik1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_Grafik1.BackColor = System.Drawing.Color.LightCyan;
+            this.btn_Grafik1.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btn_Grafik1.FlatAppearance.BorderSize = 3;
             this.btn_Grafik1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btn_Grafik1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Grafik1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Grafik1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Grafik1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_Grafik1.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Grafik1.ForeColor = System.Drawing.Color.Teal;
             this.btn_Grafik1.Location = new System.Drawing.Point(114, 426);
             this.btn_Grafik1.Name = "btn_Grafik1";
             this.btn_Grafik1.Size = new System.Drawing.Size(240, 79);
@@ -119,18 +119,19 @@
             // 
             this.txt_MainMenu.AutoSize = true;
             this.txt_MainMenu.BackColor = System.Drawing.Color.Transparent;
-            this.txt_MainMenu.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Bold);
+            this.txt_MainMenu.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_MainMenu.ForeColor = System.Drawing.Color.Teal;
             this.txt_MainMenu.Location = new System.Drawing.Point(108, 536);
             this.txt_MainMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_MainMenu.Name = "txt_MainMenu";
-            this.txt_MainMenu.Size = new System.Drawing.Size(138, 33);
+            this.txt_MainMenu.Size = new System.Drawing.Size(143, 36);
             this.txt_MainMenu.TabIndex = 8;
             this.txt_MainMenu.Text = "Ana Sayfa";
             this.txt_MainMenu.Click += new System.EventHandler(this.txt_MainMenu_Click);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Image = global::HastaneRandevu.Properties.Resources.Adsız_tasarım__10_;
             this.pictureBox3.Location = new System.Drawing.Point(1231, 1);
             this.pictureBox3.Name = "pictureBox3";

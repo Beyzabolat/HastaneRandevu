@@ -18,9 +18,8 @@ namespace HastaneRandevu
             string[] bolumler = { "Dahiliye", "Kulak-Burun-Boğaz", "Psikiyatri", "Üroloji", "Genel Cerrahi", "Kardiyoloji" };
             int lenght = bolumler.Length;
 
-            // Chart kontrolünü formunuza eklediğinizi varsayıyoruz
-            // Eğer henüz eklemediyseniz, Visual Studio Toolbox'tan sürükleyip bırakabilirsiniz
-            chart1.Series.Clear();  // Önceki serileri temizler
+           
+            chart1.Series.Clear();  
 
             Series series = new Series
             {
@@ -54,6 +53,13 @@ namespace HastaneRandevu
             {
                 Application.Exit();
             }
+        }
+
+        private void txtMainMenu_Click(object sender, EventArgs e)
+        {
+            DocAnaSayfa docAnaSayfa = new DocAnaSayfa();
+            docAnaSayfa.Show();
+            this.Hide();
         }
     }
 }

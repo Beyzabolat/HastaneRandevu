@@ -67,5 +67,22 @@ namespace LogicLayer
         {
             return DALDoc.DoktorSoyadıCek(p);
         }
+       
+
+        public static string LLDoktorSifreAl(string email)
+        {
+            using (OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\admin\\Desktop\\HastaneRandevu\\HastaneRandevuKayıt.accdb;"))
+            {
+                string query = "SELECT DocPASSWORD FROM DocBilgi WHERE DocMAİL = @p1";
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                cmd.Parameters.AddWithValue("@p1", email);
+
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                conn.Close();
+
+                return result != null ? result.ToString() : null;
+            }
+        }
     }
 }
