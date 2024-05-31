@@ -21,4 +21,4 @@ Bu proje, doktorlar, hastalar ve sekreterler arasında randevu yönetimini kolay
 
 1. **Repository'yi Klonlayın:**
    ```bash
-   git clone https://github.com/kullanici-adi/HastaneOtomasyonu.git
+   git clone https://github.com/Beyzabolat/HastaneRandevu.git
